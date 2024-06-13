@@ -16,7 +16,7 @@ class UserResource extends JsonResource
     {
         return [
             'type' => 'user',
-            'id' => $this->id,
+            'id' => (string) $this->id,
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
@@ -26,10 +26,16 @@ class UserResource extends JsonResource
                     'updatedAt' => $this->updated_at
                 ])
             ],
-            'includes' => TicketResource::collection($this->whenLoaded('tickets')),
             'links' => [
                 'self' => route('users.show', ['user' => $this->id])
             ]
+        ];
+    }
+
+    public function with($request) : array
+    {
+        return [
+            'included' => TicketResource::collection($this->whenLoaded('tickets'))->resolve()
         ];
     }
 }

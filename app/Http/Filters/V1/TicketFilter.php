@@ -28,7 +28,7 @@ class TicketFilter extends QueryFilter {
         $likeStr = str_replace('*', '%', $value);
         return $this->builder->where('title', 'like', $likeStr);
     }
-    
+
     public function updatedAt($value) {
         $dates = explode(',', $value);
 

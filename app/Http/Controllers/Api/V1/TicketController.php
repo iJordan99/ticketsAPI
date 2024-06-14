@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api\V1;
+
 use App\Http\Filters\V1\TicketFilter;
 use App\Http\Requests\Api\V1\StoreTicketRequest;
 use App\Http\Requests\Api\V1\UpdateTicketRequest;
@@ -16,9 +17,7 @@ class TicketController extends ApiController
     {
         return TicketResource::collection(Ticket::filter($filters)->paginate());
     }
-
-
-
+    
     /**
      * Store a newly created resource in storage.
      */
@@ -32,7 +31,7 @@ class TicketController extends ApiController
      */
     public function show(Ticket $ticket)
     {
-        if ($this->include('author')){
+        if ($this->include('author')) {
             return new TicketResource($ticket->load('user'));
         }
         return new TicketResource($ticket);

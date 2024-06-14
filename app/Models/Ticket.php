@@ -13,11 +13,13 @@ class Ticket extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['title', 'status', 'description', 'user_id'];
+
     protected $casts = [
         'status' => StatusEnum::class
     ];
 
-    public function author() : BelongsTo
+    public function author(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
     }

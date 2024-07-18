@@ -1,24 +1,27 @@
 <?php
 
-namespace  App\Traits;
+namespace App\Traits;
 
-trait ApiResponses{
+use Illuminate\Http\JsonResponse;
+
+trait ApiResponses
+{
 
     protected function ok($message, $data = [])
     {
         return $this->success($message, $data, 200);
     }
 
-    protected function success($message, $data = [], $statusCode = 200): \Illuminate\Http\JsonResponse
+    protected function success($message, $data = [], $statusCode = 200): JsonResponse
     {
         return response()->json([
             'message' => $message,
-             'data' => $data,
+            'data' => $data,
             'status' => $statusCode
         ], $statusCode);
     }
 
-    protected function error($message, $statusCode): \Illuminate\Http\JsonResponse
+    protected function error($message, $statusCode): JsonResponse
     {
         return response()->json([
             'message' => $message,

@@ -31,14 +31,12 @@ class TicketController extends ApiController
     public function store(StoreTicketRequest $request)
     {
         try {
-
             Gate::authorize('store', Ticket::class);
 
             return new TicketResource(Ticket::create($request->mappedAttributes()));
         } catch (AuthorizationException $exception) {
-            return $this->error('You are not authorized to update that resource', 401);
+            return $this->error($exception->getMessage(), 403);
         }
-        
     }
 
     /**
@@ -66,14 +64,16 @@ class TicketController extends ApiController
         try {
             $ticket = Ticket::findOrFail($ticket_id);
 
-            Gate::authorize('replace', Ticket::class);
+            Gate::authorize('replace', $ticket);
 
             $ticket->update($request->mappedAttributes());
 
             return new TicketResource($ticket);
 
         } catch (ModelNotFoundException $exception) {
-            return $this->error('Ticket cannot be found.', 404);
+            return $this->error('Ticket not found.', 404);
+        } catch (AuthorizationException $exception) {
+            return $this->error($exception->getMessage(), 403);
         }
     }
 
@@ -114,6 +114,8 @@ class TicketController extends ApiController
 
         } catch (ModelNotFoundException $exception) {
             return $this->error('Ticket not found', 404);
+        } catch (AuthorizationException $exception) {
+            return $this->error($exception->getMessage(), 403);
         }
     }
 }

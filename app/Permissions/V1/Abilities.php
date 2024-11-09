@@ -21,6 +21,8 @@ final class Abilities
     public const ReplaceUser = 'user:replace';
     public const DeleteUser = 'user:delete';
 
+    public const FetchUser = 'user:fetch';
+
     public static function getAbilities(User $user)
     {
         if ($user->is_admin) {
@@ -33,6 +35,7 @@ final class Abilities
                 self::DeleteTicket,
                 self::ReplaceUser,
                 self::DeleteUser,
+                self::FetchUser
             ];
         } else {
             return [

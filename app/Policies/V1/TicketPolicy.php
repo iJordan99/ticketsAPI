@@ -31,21 +31,14 @@ class TicketPolicy
         return false;
     }
 
-    public function store(User $user, Ticket $ticket): bool
+    public function store(User $user)
     {
-        if ($user->tokenCan(Abilities::CreateTicket)) {
-            return true;
-        }
-
-        return false;
+        return $user->tokenCan(Abilities::CreateTicket) ||
+            $user->tokenCan(Abilities::CreateOwnTicket);
     }
 
     public function replace(User $user, Ticket $ticket): bool
     {
-        if ($user->tokenCan(Abilities::ReplaceTicket)) {
-            return true;
-        }
-
-        return false;
+        return $user->tokenCan(Abilities::ReplaceTicket);
     }
 }

@@ -49,13 +49,13 @@ class TicketController extends ApiController
             $ticket = Ticket::findOrFail($ticket_id);
 
             if ($this->include('author')) {
-                return new TicketResource($ticket->load('user'));
+                return new TicketResource($ticket->load('author'));
             }
 
             return new TicketResource($ticket);
 
         } catch (ModelNotFoundException $exception) {
-            return $this->error('Ticket not found', 404);
+            return $this->error($exception->getMessage(), 404);
         }
     }
 
@@ -71,7 +71,7 @@ class TicketController extends ApiController
             return new TicketResource($ticket);
 
         } catch (ModelNotFoundException $exception) {
-            return $this->error('Ticket not found.', 404);
+            return $this->error($exception->getMessage(), 404);
         } catch (AuthorizationException $exception) {
             return $this->error($exception->getMessage(), 403);
         }
@@ -92,7 +92,7 @@ class TicketController extends ApiController
             return new TicketResource($ticket);
 
         } catch (ModelNotFoundException $exception) {
-            return $this->error('Ticket not found', 404);
+            return $this->error($exception->getMessage(), 404);
         } catch (AuthorizationException $exception) {
             return $this->error($exception->getMessage(), 403);
         }

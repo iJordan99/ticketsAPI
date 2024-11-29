@@ -16,10 +16,11 @@ class UserResource extends JsonResource
     {
         return [
             'type' => 'user',
-            'id' => (string) $this->id,
+            'id' => (string)$this->id,
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
+                'isAdmin' => $this->is_admin,
                 $this->mergeWhen($request->routeIs('authors.*'), [
                     'emailVerifiedAt' => $this->email_verified_at,
                     'createdAt' => $this->created_at,
@@ -29,13 +30,6 @@ class UserResource extends JsonResource
             'links' => [
                 'self' => route('authors.show', ['author' => $this->id])
             ]
-        ];
-    }
-
-    public function with($request) : array
-    {
-        return [
-            'included' => TicketResource::collection($this->whenLoaded('tickets'))->resolve()
         ];
     }
 }

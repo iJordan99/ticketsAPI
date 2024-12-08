@@ -27,6 +27,7 @@ class User extends Authenticatable
         'is_admin'
     ];
 
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -39,7 +40,7 @@ class User extends Authenticatable
 
     public function tickets(): HasMany
     {
-        return $this->hasMany(Ticket::class);
+        return $this->hasMany(Ticket::class, 'user_id');
     }
 
     public function scopeFilter(Builder $builder, QueryFilter $filters)

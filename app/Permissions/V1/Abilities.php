@@ -7,41 +7,45 @@ use App\Models\User;
 
 final class Abilities
 {
-    public const CreateTicket = 'ticket:create';
-    public const UpdateTicket = 'ticket:update';
-    public const ReplaceTicket = 'ticket:replace';
+    public const CreateAuthorTicket = 'author:ticket:create';
+    public const UpdateAuthorTicket = 'author:ticket:update';
+    public const ReplaceAuthorTicket = 'author:ticket:replace';
+    public const ViewAuthorTicket = 'author:ticket:view';
+    public const ViewAuthor = 'author:view';
+    public const ReplaceOwnTicket = 'ticket:own:replace';
     public const DeleteTicket = 'ticket:delete';
-
     public const UpdateOwnTicket = 'ticket:own:update';
     public const DeleteOwnTicket = 'ticket:own:delete';
-    const CreateOwnTicket = 'ticket:own:create';
-
+    public const CreateOwnTicket = 'ticket:own:create';
+    public const ViewOwnTicket = 'ticket:own:view';
     public const CreateUser = 'user:create';
     public const UpdateUser = 'user:update';
     public const ReplaceUser = 'user:replace';
     public const DeleteUser = 'user:delete';
 
-    public const FetchUser = 'user:fetch';
-
     public static function getAbilities(User $user)
     {
         if ($user->is_admin) {
             return [
-                self::UpdateTicket,
-                self::CreateTicket,
+                self::UpdateAuthorTicket,
+                self::CreateAuthorTicket,
                 self::CreateUser,
-                self::ReplaceTicket,
+                self::ReplaceAuthorTicket,
                 self::UpdateUser,
                 self::DeleteTicket,
                 self::ReplaceUser,
                 self::DeleteUser,
-                self::FetchUser
+                self::ViewAuthor,
+                self::ViewAuthorTicket,
+
             ];
         } else {
             return [
                 self::UpdateOwnTicket,
                 self::DeleteOwnTicket,
-                self::CreateOwnTicket
+                self::CreateOwnTicket,
+                self::ViewOwnTicket,
+                self::ReplaceOwnTicket,
             ];
         }
     }

@@ -9,8 +9,6 @@ use App\Http\Requests\Api\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
 use App\Policies\V1\UserPolicy;
-use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\Gate;
 
 class UserController extends ApiController
@@ -19,91 +17,51 @@ class UserController extends ApiController
 
     public function index(AuthorFilter $filter)
     {
+        Gate::authorize('view', User::class);
         return UserResource::collection(
             User::filter($filter)->paginate()
         );
     }
 
+    public function show(User $user)
+    {
+        Gate::authorize('show', User::class);
+        return new UserResource($user);
+    }
+
     public function store(StoreUserRequest $request)
     {
-        try {
-            Gate::authorize('store', User::class);
-            return new UserResource(User::create($request->mappedAttributes()));
-        } catch (AuthorizationException $exception) {
-            return $this->error($exception->getMessage(), 404);
-
-        }
+        Gate::authorize('store', User::class);
+        return new UserResource(User::create($request->mappedAttributes()));
     }
 
-    public function show($user_id)
+    public function replace(ReplaceUserRequest $request, User $user)
     {
-        try {
+        Gate::authorize('replace', $user);
 
-            $user = User::findOrFail($user_id);
+        $user->update($request->mappedAttributes());
 
-
-            return new UserResource($user);
-
-        } catch (ModelNotFoundException $exception) {
-            return $this->error($exception->getMessage(), 404);
-        }
+        return new UserResource($user);
     }
 
-    public function replace(ReplaceUserRequest $request, $user_id)
+    public function update(UpdateUserRequest $request, User $user)
     {
-        try {
-            $user = User::findOrFail($user_id);
+        Gate::authorize('update', $user);
 
-            Gate::authorize('replace', $user);
+        $user->update($request->mappedAttributes());
 
-            $user->update($request->mappedAttributes());
-
-            return new UserResource($user);
-
-        } catch (ModelNotFoundException $exception) {
-            return $this->error($exception->getMessage(), 404);
-        } catch (AuthorizationException $exception) {
-            return $this->error($exception->getMessage(), 403);
-        }
+        return new UserResource($user);
     }
 
-    public function update(UpdateUserRequest $request, $user_id)
+    public function destroy(User $user)
     {
-        try {
-            $user = User::findOrFail($user_id);
-
-            Gate::authorize('update', $user);
-
-            $user->update($request->mappedAttributes());
-
-            return new UserResource($user);
-
-        } catch (ModelNotFoundException $exception) {
-            return $this->error($exception->getMessage(), 404);
-        } catch (AuthorizationException $exception) {
-            return $this->error($exception->getMessage(), 403);
+        Gate::authorize('delete', $user);
+        if ($user->tickets()->exists()) {
+            return $this->error('User has associated tickets and cannot be deleted.', 400);
         }
-    }
 
-    public function destroy($user_id)
-    {
-        try {
-            $user = User::findOrFail($user_id);
+        $user->delete();
 
-            Gate::authorize('delete', $user);
-
-            if ($user->tickets()->exists()) {
-                return $this->error('User has associated tickets and cannot be deleted.', 400);
-            }
-
-            $user->delete();
-
-            return $this->ok('User deleted');
-
-        } catch (ModelNotFoundException $exception) {
-            return $this->error($exception->getMessage(), 404);
-        } catch (AuthorizationException $exception) {
-            return $this->error($exception->getMessage(), 403);
-        }
+        return $this->ok('User deleted');
     }
 }

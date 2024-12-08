@@ -13,7 +13,7 @@ class ReplaceUserRequest extends BaseTicketRequest
     {
         return [
             'data.attributes.name' => 'required|string',
-            'data.attributes.email' => 'sometimes|email|string|unique:users,email,' . $this->route('user'),
+            'data.attributes.email' => 'sometimes|email|string|unique:users,email,',
             'data.attributes.isAdmin' => 'required|boolean',
             'data.attributes.password' => 'required|string',
         ];

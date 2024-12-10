@@ -23,10 +23,11 @@ final class Abilities
     public const ReplaceUser = 'user:replace';
     public const DeleteUser = 'user:delete';
 
-    public static function getAbilities(User $user)
+    public static function getAbilities(User $user): array
     {
         if ($user->is_admin) {
             return [
+                self::ViewAuthorTicket,
                 self::UpdateAuthorTicket,
                 self::CreateAuthorTicket,
                 self::CreateUser,
@@ -35,9 +36,7 @@ final class Abilities
                 self::DeleteTicket,
                 self::ReplaceUser,
                 self::DeleteUser,
-                self::ViewAuthor,
-                self::ViewAuthorTicket,
-
+                self::ViewAuthor
             ];
         } else {
             return [

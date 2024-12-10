@@ -13,7 +13,7 @@ class Ticket extends Model
 {
     use HasFactory;
 
-    const  priorityMap = [
+    const priorityMap = [
         'low' => 1,
         'medium' => 2,
         'high' => 3,
@@ -25,7 +25,6 @@ class Ticket extends Model
 
     public function setPriorityAttribute($value): void
     {
-        // Convert the string to its corresponding integer value
         $this->attributes['priority'] = self::priorityMap[strtolower($value)] ?? null;
     }
 

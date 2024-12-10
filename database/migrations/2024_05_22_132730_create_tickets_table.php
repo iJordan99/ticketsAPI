@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained();
             $table->string('title');
             $table->text('description');
-            $table->integer('priority')->default(2);
+            $table->integer('priority')->nullable();
             $table->string('status');
 
             $table->timestamps();

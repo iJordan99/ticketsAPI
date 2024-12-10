@@ -12,6 +12,8 @@ class ReplaceUserRequest extends BaseTicketRequest
     public function rules(): array
     {
         return [
+            'data' => 'required|array',
+            'data.attributes' => 'required|array',
             'data.attributes.name' => 'required|string',
             'data.attributes.email' => 'sometimes|email|string|unique:users,email,',
             'data.attributes.isAdmin' => 'required|boolean',

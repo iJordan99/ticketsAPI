@@ -13,11 +13,27 @@ class Ticket extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'status', 'description', 'user_id'];
-
+    private static array $priorityMap = [
+        'low' => 1,
+        'medium' => 2,
+        'high' => 3,
+    ];
+    protected $fillable = ['title', 'status', 'description', 'user_id', 'priority'];
     protected $casts = [
         'status' => StatusEnum::class
     ];
+
+    public function setPriorityAttribute($value): void
+    {
+        // Convert the string to its corresponding integer value
+        $this->attributes['priority'] = self::$priorityMap[strtolower($value)] ?? null;
+    }
+
+    public function getPriorityAttribute($value): int|string|null
+    {
+        $reverseMap = array_flip(self::$priorityMap);
+        return $reverseMap[$value] ?? null;
+    }
 
     public function author(): BelongsTo
     {

@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Ticket extends Model
 {
@@ -18,7 +19,15 @@ class Ticket extends Model
         'medium' => 2,
         'high' => 3,
     ];
-    protected $fillable = ['title', 'status', 'description', 'user_id', 'priority'];
+    protected $fillable = [
+        'user_id',
+        'title',
+        'description',
+        'priority',
+        'status',
+        'reproduction_step',
+        'error_code'
+    ];
     protected $casts = [
         'status' => StatusEnum::class
     ];

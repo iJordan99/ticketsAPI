@@ -33,8 +33,7 @@ class  StoreTicketRequest extends BaseTicketRequest
             'data.attributes' => 'required|array',
             'data.attributes.title' => 'required|string',
             'data.attributes.description' => 'required|string',
-            'data.attributes.status' => 'required|string|in:A,C,H,X',
-            'data.attributes.priority' => 'string|in:low,medium,high,Low,Medium,High',
+            'data.attributes.priority' => $isTicketsController ? 'nullable|string|in:low,medium,high' : 'required|string|in:low,medium,high'
         ];
 
         if ($isTicketsController) {
@@ -57,27 +56,27 @@ class  StoreTicketRequest extends BaseTicketRequest
         $documentation = [
             'data.attributes.title' => [
                 'description' => "The ticket's title (method)",
-                'example' => 'No-example'
+                'example' => 'Unable to Access Email on Outlook'
             ],
             'data.attributes.description' => [
                 'description' => "The ticket's description",
-                'example' => 'No-example',
+                'example' => 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."',
             ],
             'data.attributes.status' => [
                 'description' => "The ticket's status",
-                'example' => 'No-example',
+                'example' => 'C',
             ],
         ];
 
         if ($this->routeIs('tickets.store')) {
             $documentation['data.relationships.author.data.id'] = [
                 'description' => 'The author assigned to the ticket.',
-                'example' => 'No-example'
+                'example' => '1'
             ];
         } else {
             $documentation['author'] = [
                 'description' => 'The author assigned to the ticket.',
-                'example' => 'No-example'
+                'example' => '1'
             ];
         }
 

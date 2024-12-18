@@ -45,9 +45,11 @@ class TicketController extends ApiController
     public function show(Ticket $ticket)
     {
         Gate::authorize('show', $ticket);
-
-        if ($this->include('author')) {
-            return new TicketResource($ticket->load('author'));
+        
+        $includeParam = request()->get('include');
+        if ($includeParam) {
+            $relationships = explode(',', strtolower($includeParam));
+            $ticket->load($relationships);
         }
 
         return new TicketResource($ticket);

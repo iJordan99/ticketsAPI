@@ -13,10 +13,12 @@ class TicketResource extends JsonResource
      * @return array<string, mixed>
      */
     public function toArray(Request $request): array
+    public function toArray(Request $request)
     {
         return [
             'type' => 'ticket',
             'id' => (string)$this->id,
+            'id' => $this->id,
             'attributes' => [
                 'title' => $this->title,
                 'description' => $this->when(
@@ -27,6 +29,10 @@ class TicketResource extends JsonResource
                 'priority' => $this->priority,
                 'createdAt' => $this->created_at,
                 'updatedAt' => $this->updated_at,
+                'reproduction_step' => $this->reproduction_step,
+                'error_code' => $this->error_code,
+                'created_at' => $this->created_at,
+                'updated_at' => $this->updated_at
             ],
             'relationships' => [
                 'author' => [

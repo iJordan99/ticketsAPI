@@ -37,8 +37,7 @@ class AuthorTicketsController extends ApiController
     }
 
     /**
-     * Store a newly created resource in storage.
-     * Create a ticket
+     * Create a ticket for an author
      *
      * Creates a ticket for the specific user.
      *

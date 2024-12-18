@@ -27,7 +27,7 @@ class TicketFilter extends QueryFilter
 
     public function include($value)
     {
-        return $this->builder->with($value);
+        return $this->builder->with(explode(',', $value));
     }
 
     public function status($value)

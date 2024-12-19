@@ -5,8 +5,6 @@ namespace App\Http\Controllers\Api\V1;
 use App\Http\Controllers\Controller;
 use App\Traits\ApiResponses;
 use Illuminate\{Support\Facades\Gate};
-use Illuminate\Auth\Access\AuthorizationException;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ApiController extends Controller
 {
@@ -34,15 +32,13 @@ class ApiController extends Controller
         return in_array(strtolower($relationship), $includeValues);
     }
 
-
-    protected function handleWithTryCatch(callable $callback)
+    public function getIncluded()
     {
-        try {
-            return $callback();
-        } catch (ModelNotFoundException $exception) {
-            return $this->error($exception->getMessage(), 404);
-        } catch (AuthorizationException $exception) {
-            return $this->error($exception->getMessage(), 403);
+        $includeParam = request()->get('include');
+        if ($includeParam) {
+            return explode(',', strtolower($includeParam));
         }
+
+        return [];
     }
 }

@@ -27,7 +27,7 @@ class UpdateTicketRequest extends BaseTicketRequest
             'data.attributes.title' => 'sometimes|string',
             'data.attributes.description' => 'sometimes|string',
             'data.attributes.status' => 'sometimes|string|in:A,C,H,X',
-            'data.attributes.priority' => 'sometimes|string|in:low,medium,high',
+            'data.attributes.priority' => 'sometimes|string|in:low,medium,high,Low,Medium,High',
             'data.relationships.author.data.id' => 'sometimes|integer',
         ];
 

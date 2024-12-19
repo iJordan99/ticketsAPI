@@ -17,7 +17,7 @@ class AuthorsController extends ApiController
      *
      * Retrieves all users that created a ticket.
      *
-     * @group Showing Authors
+     * @group Authors
      */
     public function index(AuthorFilter $filters)
     {
@@ -32,7 +32,7 @@ class AuthorsController extends ApiController
      *
      * Retrieves all users that created a ticket.
      *
-     * @group Showing Authors
+     * @group Authors
      * */
     public function show(User $author)
     {

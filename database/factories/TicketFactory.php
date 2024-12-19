@@ -3,11 +3,12 @@
 namespace Database\Factories;
 
 use App\Enums\StatusEnum;
+use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Ticket>
+ * @extends Factory<Ticket>
  */
 class TicketFactory extends Factory
 {
@@ -20,9 +21,11 @@ class TicketFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'title' => fake()->word(3,true),
+            'title' => fake()->word(3, true),
             'description' => fake()->paragraph(),
-            'status' => $this->faker->randomElement(StatusEnum::cases())->value
+            'status' => $this->faker->randomElement(StatusEnum::cases())->value,
+            'reproduction_step' => $this->faker->text(),
+            'error_code' => $this->faker->randomAscii()
         ];
     }
 }

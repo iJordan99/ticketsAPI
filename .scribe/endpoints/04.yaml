@@ -1,0 +1,100 @@
+name: Authors
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/authors
+    metadata:
+      groupName: Authors
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get authors.'
+      description: 'Retrieves all users that created a ticket.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"type":"user","id":1,"attributes":{"name":"Prof. Lowell Bruen Jr.","email":"lrenner@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/1"}},{"type":"user","id":2,"attributes":{"name":"Keenan Waelchi","email":"zthompson@example.com","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/2"}},{"type":"user","id":3,"attributes":{"name":"Marquis Howe II","email":"fokon@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/3"}},{"type":"user","id":4,"attributes":{"name":"Bryana Klocko","email":"nader.lindsey@example.com","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/4"}},{"type":"user","id":5,"attributes":{"name":"Jonas Lindgren Sr.","email":"beahan.darwin@example.com","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/5"}},{"type":"user","id":6,"attributes":{"name":"Mrs. Sonya Reichel IV","email":"noah.gibson@example.com","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/6"}},{"type":"user","id":7,"attributes":{"name":"Nora Lesch","email":"leda.block@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/7"}},{"type":"user","id":8,"attributes":{"name":"Oliver McGlynn","email":"caitlyn58@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/8"}},{"type":"user","id":9,"attributes":{"name":"Ruth O''Connell","email":"ybartell@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/9"}},{"type":"user","id":10,"attributes":{"name":"Jessie Dicki","email":"mschuster@example.com","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/10"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/authors?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/authors?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/authors?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/authors","per_page":15,"to":10,"total":10}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/authors/{id}'
+    metadata:
+      groupName: Authors
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get an author.'
+      description: 'Retrieves all users that created a ticket.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the author.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"type":"user","id":1,"attributes":{"name":"Prof. Lowell Bruen Jr.","email":"lrenner@example.org","is_admin":false,"email_verified_at":"2024-12-18T06:31:49.000000Z","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/1"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []

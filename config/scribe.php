@@ -112,7 +112,7 @@ return [
 
         // The value of the parameter to be used by Scribe to authenticate response calls.
         // This will NOT be included in the generated documentation. If empty, Scribe will use a random value.
-        'use_value' => '1|n03VfZ2kPZLHvxccG0wRe9HjpvNdEucLipQSQ72m82fe428d',
+        'use_value' => '4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c',
 
         // Placeholder your users will see for the auth parameter in the example requests.
         // Set this to null if you want Scribe to use a random value as placeholder instead.
@@ -170,7 +170,14 @@ INTRO
         // By default, Scribe will sort groups alphabetically, and endpoints in the order their routes are defined.
         // You can override this by listing the groups, subgroups and endpoints here in the order you want them.
         // See https://scribe.knuckles.wtf/blog/laravel-v4#easier-sorting and https://scribe.knuckles.wtf/laravel/reference/config#order for details
-        'order' => [],
+        'order' => [
+            'Authentication',
+            'Tickets',
+            'Tickets by Author',
+            'Assigned Tickets',
+            'Users',
+            'Authors'
+        ],
     ],
 
     // Custom logo path. This will be used as the value of the src attribute for the <img> tag,

@@ -1,0 +1,643 @@
+name: Tickets
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/v1/tickets
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get all tickets'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      sort:
+        name: sort
+        description: 'Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign.'
+        required: false
+        example: 'sort=title,-createdAt'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+      'filter[status]':
+        name: 'filter[status]'
+        description: 'Filter by status code: A, C, H, X.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      'filter[title]':
+        name: 'filter[title]'
+        description: 'Filter by title. Wildcards are supported.'
+        required: false
+        example: '*fix*'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      sort: 'sort=title,-createdAt'
+      'filter[title]': '*fix*'
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":[{"type":"ticket","id":1,"attributes":{"title":"velit","status":"X","priority":"high","reproduction_step":"Excepturi iste dolore culpa repudiandae. Minus consectetur dolorem quia quod ipsam omnis voluptatem. Quo est est at ipsum ut sit. Natus totam quia id et tempore.","error_code":";","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}},{"type":"ticket","id":100,"attributes":{"title":"iure","status":"X","priority":"medium","reproduction_step":"Doloremque consequatur voluptatem nulla dolores. Officia et odit officia voluptatem tempore fugiat et rerum. Cumque totam eaque facilis laboriosam quasi ut. Maiores quidem atque velit ex non quas.","error_code":"1","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/100"}},{"type":"ticket","id":3,"attributes":{"title":"pariatur","status":"C","priority":"medium","reproduction_step":"Temporibus autem et magni voluptatem voluptatibus ducimus. Distinctio natus sit ipsam ea dolores ipsum.","error_code":".","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/3"}},{"type":"ticket","id":4,"attributes":{"title":"accusamus","status":"H","priority":"medium","reproduction_step":"Odio quibusdam consequatur doloribus vel possimus fugiat. Officiis a eligendi suscipit.","error_code":"y","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/4"}},{"type":"ticket","id":5,"attributes":{"title":"quo","status":"H","priority":"medium","reproduction_step":"Accusantium veritatis inventore et. Quia adipisci ad qui at veniam. Laboriosam eius vero placeat a ullam odit. Sit eum deserunt fugiat placeat doloremque.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/5"}},{"type":"ticket","id":6,"attributes":{"title":"voluptas","status":"H","priority":"medium","reproduction_step":"Nobis recusandae tenetur dicta vero facilis aperiam velit sed. Earum quibusdam modi delectus pariatur aut. Incidunt et quos exercitationem. Alias asperiores autem natus autem fugiat hic.","error_code":"X","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/6"}},{"type":"ticket","id":7,"attributes":{"title":"autem","status":"X","priority":"medium","reproduction_step":"Quis quibusdam debitis possimus assumenda mollitia delectus. Cumque provident facere illo eos alias possimus. Tempore autem nihil quis reiciendis voluptatem.","error_code":"L","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/7"}},{"type":"ticket","id":8,"attributes":{"title":"minima","status":"C","priority":"medium","reproduction_step":"Velit culpa hic et. Repellat distinctio ex delectus ut. Qui non tenetur illum voluptas earum.","error_code":"U","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/8"}},{"type":"ticket","id":9,"attributes":{"title":"dignissimos","status":"C","priority":"medium","reproduction_step":"Tempore maiores aut architecto id ipsam cum. Amet quo expedita tempore ea et. Maiores eum laborum velit et distinctio autem.","error_code":"E","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/9"}},{"type":"ticket","id":10,"attributes":{"title":"quidem","status":"X","priority":"medium","reproduction_step":"Voluptas vel molestiae earum adipisci. Maxime ipsa quos harum qui id et. Cumque voluptas cum sunt maxime vel qui.","error_code":"l","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/10"}},{"type":"ticket","id":11,"attributes":{"title":"eaque","status":"H","priority":"medium","reproduction_step":"Veritatis ea sed cupiditate nulla. Occaecati quos esse esse adipisci accusamus et. Aperiam cum delectus fugit veniam quaerat vel facilis. Nemo dignissimos ut eligendi ex facere debitis labore.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/11"}},{"type":"ticket","id":12,"attributes":{"title":"quo","status":"C","priority":"medium","reproduction_step":"Quisquam molestiae quis facilis doloremque dolores. Officia eius dolores tempora ipsa. Ipsam eius numquam vero aliquam.","error_code":"d","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/12"}},{"type":"ticket","id":13,"attributes":{"title":"quam","status":"H","priority":"medium","reproduction_step":"Voluptatem minus ex in perferendis sit. Eum quia neque praesentium vero. Nemo voluptatem quidem pariatur aut qui. Enim sed eos at doloremque vel fuga nemo.","error_code":"''","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/13"}},{"type":"ticket","id":14,"attributes":{"title":"fugiat","status":"X","priority":"medium","reproduction_step":"Libero aut quae saepe accusamus et dignissimos. Laudantium doloremque atque perspiciatis laborum aut. Consectetur velit est non quis enim.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/14"}},{"type":"ticket","id":15,"attributes":{"title":"aut","status":"H","priority":"medium","reproduction_step":"Rerum enim quisquam omnis maiores vitae aliquid ut molestiae. Accusantium dolores deleniti pariatur animi quas modi velit. Itaque quia molestiae maxime facilis quos dicta aspernatur fugit.","error_code":"X","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/15"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","prev":null,"next":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":7,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=3","label":"3","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=4","label":"4","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=5","label":"5","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=6","label":"6","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","label":"7","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/tickets","per_page":15,"to":15,"total":100}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/tickets
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a ticket'
+      description: 'Creates a new ticket record. Users can only create tickets for themselves'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.title:
+        name: data.attributes.title
+        description: "The ticket's title (method)."
+        required: true
+        example: 'Unable to Access Email on Outlook'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.description:
+        name: data.attributes.description
+        description: "The ticket's description."
+        required: true
+        example: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.priority:
+        name: data.attributes.priority
+        description: ''
+        required: false
+        example: high
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      data.relationships:
+        name: data.relationships
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author:
+        name: data.relationships.author
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data:
+        name: data.relationships.author.data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data.id:
+        name: data.relationships.author.data.id
+        description: 'The author assigned to the ticket. The <code>id</code> of an existing record in the users table.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          title: 'Unable to Access Email on Outlook'
+          description: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."'
+          priority: high
+        relationships:
+          author:
+            data:
+              id: 1
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"type":"ticket","id":107,"attributes":{"title":"asdfasdfasdfasdfasdfsadf","description":"test ticket","status":"A","createdAt":"2024-03-26T04:40:48.000000Z","updatedAt":"2024-03-26T04:40:48.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/tickets\/107"}}}'
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/v1/tickets/{id}'
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show a specific ticket.'
+      description: 'Display an individual ticket.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: '{"data":{"type":"ticket","id":1,"attributes":{"title":"velit","description":"Quibusdam sint quis esse ullam quia corrupti. Quasi sit eos ducimus cupiditate velit beatae ducimus. Fugit ut quos voluptatem adipisci.","status":"X","priority":"high","reproduction_step":"Excepturi iste dolore culpa repudiandae. Minus consectetur dolorem quia quod ipsam omnis voluptatem. Quo est est at ipsum ut sit. Natus totam quia id et tempore.","error_code":";","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}}}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: 'api/v1/tickets/{ticket_id}'
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Replace Ticket'
+      description: 'Replace the specified ticket in storage.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      ticket_id:
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ticket_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.title:
+        name: data.attributes.title
+        description: ''
+        required: true
+        example: ad
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.description:
+        name: data.attributes.description
+        description: ''
+        required: true
+        example: 'Et corrupti reiciendis nostrum est error.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.status:
+        name: data.attributes.status
+        description: ''
+        required: true
+        example: X
+        type: string
+        enumValues:
+          - A
+          - C
+          - H
+          - X
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.priority:
+        name: data.attributes.priority
+        description: 'Must be at least 1. Must not be greater than 3.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships:
+        name: data.relationships
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author:
+        name: data.relationships.author
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data:
+        name: data.relationships.author.data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data.id:
+        name: data.relationships.author.data.id
+        description: ''
+        required: true
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          title: ad
+          description: 'Et corrupti reiciendis nostrum est error.'
+          status: X
+          priority: 1
+        relationships:
+          author:
+            data:
+              id: 19
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/tickets/{ticket_id}'
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Ticket'
+      description: 'Update the specified ticket in storage.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      ticket_id:
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ticket_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data:
+        name: data
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.title:
+        name: data.attributes.title
+        description: ''
+        required: false
+        example: libero
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.description:
+        name: data.attributes.description
+        description: ''
+        required: false
+        example: 'Dolores rem ratione optio non.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.status:
+        name: data.attributes.status
+        description: ''
+        required: false
+        example: C
+        type: string
+        enumValues:
+          - A
+          - C
+          - H
+          - X
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.priority:
+        name: data.attributes.priority
+        description: ''
+        required: false
+        example: Low
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+          - Low
+          - Medium
+          - High
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data:
+        name: data.relationships.author.data
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author:
+        name: data.relationships.author
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships:
+        name: data.relationships
+        description: ''
+        required: false
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data.id:
+        name: data.relationships.author.data.id
+        description: ''
+        required: false
+        example: 7
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          title: libero
+          description: 'Dolores rem ratione optio non.'
+          status: C
+          priority: Low
+        relationships:
+          author:
+            data:
+              id: 7
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/tickets/{ticket_id}'
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete ticket.'
+      description: 'Remove the specified resource from storage.'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      ticket_id:
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ticket_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+    controller: null
+    method: null
+    route: null
+    custom: []

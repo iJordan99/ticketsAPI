@@ -26,5 +26,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'The Manager',
             'is_admin' => true
         ]);
+
+        
     }
 }

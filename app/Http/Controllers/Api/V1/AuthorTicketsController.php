@@ -6,19 +6,19 @@ use App\Http\Filters\V1\TicketFilter;
 use App\Http\Requests\{Api\V1\ReplaceTicketRequest, Api\V1\StoreTicketRequest, Api\V1\UpdateTicketRequest};
 use App\Http\Resources\{V1\TicketResource};
 use App\Models\{Ticket, User};
-use App\Policies\V1\AuthorTickets;
+use App\Policies\V1\AuthorTicketsPolicy;
 use Illuminate\{Support\Facades\Gate};
 
 class AuthorTicketsController extends ApiController
 {
-    protected string $policy = AuthorTickets::class;
+    protected string $policy = AuthorTicketsPolicy::class;
 
     /**
      * Get all tickets
      *
      * Retrieves all tickets created by a specific user.
      *
-     * @group Managing Tickets by Author
+     * @group Tickets by Author
      *
      * @urlParam author_id integer required The author's ID. No-example
      *
@@ -41,7 +41,7 @@ class AuthorTicketsController extends ApiController
      *
      * Creates a ticket for the specific user.
      *
-     * @group Managing Tickets by Author
+     * @group Tickets by Author
      *
      * @urlParam author_id integer required The author's ID. No-example
      *
@@ -63,7 +63,7 @@ class AuthorTicketsController extends ApiController
      *
      * Replaces an author's ticket.
      *
-     * @group Managing Tickets by Author
+     * @group Tickets by Author
      * @urlParam author_id integer required The author's ID. No-example
      * @urlParam ticket_id integer required The ticket ID. No-example
      * @response {"data":{"type":"ticket","id":107,"attributes":{"title":"asdfasdfasdfasdfasdfsadf","description":"test ticket","status":"A","createdAt":"2024-03-26T04:40:48.000000Z","updatedAt":"2024-03-26T04:40:48.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/tickets\/107"}}}
@@ -81,7 +81,7 @@ class AuthorTicketsController extends ApiController
      *
      * Updates an author's ticket.
      *
-     * @group Managing Tickets by Author
+     * @group Tickets by Author
      * @urlParam author_id integer required The author's ID. No-example
      * @urlParam ticket_id integer required The ticket ID. No-example
      */
@@ -96,7 +96,7 @@ class AuthorTicketsController extends ApiController
     /**
      * Deletes an author's ticket.
      *
-     * @group Managing Tickets by Author
+     * @group Tickets by Author
      * @urlParam author_id integer required The author's ID. No-example
      * @urlParam id integer required The ticket ID. No-example
      * @response {}

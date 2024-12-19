@@ -20,7 +20,7 @@ class TicketController extends ApiController
     /**
      * Get all tickets
      *
-     * @group Managing Tickets
+     * @group Tickets
      * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=title,-createdAt
      * @queryParam filter[status] Filter by status code: A, C, H, X. No-example
      * @queryParam filter[title] Filter by title. Wildcards are supported. Example: *fix*
@@ -39,18 +39,15 @@ class TicketController extends ApiController
      *
      * Display an individual ticket.
      *
-     * @group Managing Tickets
+     * @group Tickets
      *
      */
     public function show(Ticket $ticket)
     {
         Gate::authorize('show', $ticket);
-        
-        $includeParam = request()->get('include');
-        if ($includeParam) {
-            $relationships = explode(',', strtolower($includeParam));
-            $ticket->load($relationships);
-        }
+
+        $includes = $this->getIncluded();
+        $ticket->load($includes);
 
         return new TicketResource($ticket);
     }
@@ -60,7 +57,7 @@ class TicketController extends ApiController
      *
      * Creates a new ticket record. Users can only create tickets for themselves
      *
-     * @group Managing Tickets
+     * @group Tickets
      *
      * @response {"data":{"type":"ticket","id":107,"attributes":{"title":"asdfasdfasdfasdfasdfsadf","description":"test ticket","status":"A","createdAt":"2024-03-26T04:40:48.000000Z","updatedAt":"2024-03-26T04:40:48.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/tickets\/107"}}}
      */
@@ -75,7 +72,7 @@ class TicketController extends ApiController
      *
      * Replace the specified ticket in storage.
      *
-     * @group Managing Tickets
+     * @group Tickets
      *
      */
     public function replace(ReplaceTicketRequest $request, Ticket $ticket)
@@ -92,7 +89,7 @@ class TicketController extends ApiController
      *
      * Update the specified ticket in storage.
      *
-     * @group Managing Tickets
+     * @group Tickets
      *
      */
     public function update(UpdateTicketRequest $request, Ticket $ticket)
@@ -109,7 +106,7 @@ class TicketController extends ApiController
      *
      * Remove the specified resource from storage.
      *
-     * @group Managing Tickets
+     * @group Tickets
      *
      */
     public function destroy(Ticket $ticket)

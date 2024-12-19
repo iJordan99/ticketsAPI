@@ -18,7 +18,7 @@ class UserController extends ApiController
     /**
      * Get all users
      *
-     * @group Managing Users
+     * @group Users
      *
      * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=name
      * @queryParam filter[name] Filter by status name. Wildcards are supported. No-example
@@ -36,7 +36,7 @@ class UserController extends ApiController
     /**
      * Display a user
      *
-     * @group Managing Users
+     * @group Users
      *
      *
      */
@@ -50,7 +50,7 @@ class UserController extends ApiController
      *
      * Create a user
      *
-     * @group Managing Users
+     * @group Users
      *
      * @response 200 {"data":{"type":"user","id":16,"attributes":{"name":"My User","email":"user@user.com","isManager":false},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/16"}}}
      */
@@ -63,7 +63,7 @@ class UserController extends ApiController
     /**
      * Replace a user
      *
-     * @group Managing Users
+     * @group Users
      *
      * @response 200 {"data":{"type":"user","id":16,"attributes":{"name":"My User","email":"user@user.com","isManager":false},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/16"}}}
      */
@@ -79,7 +79,7 @@ class UserController extends ApiController
     /**
      * Update a user
      *
-     * @group Managing Users
+     * @group Users
      *
      * @response 200 {"data":{"type":"user","id":16,"attributes":{"name":"My User","email":"user@user.com","isManager":false},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/16"}}}
      */
@@ -95,7 +95,7 @@ class UserController extends ApiController
     /**
      * Delete a user
      *
-     * @group Managing Users
+     * @group Users
      *
      * @response 200 {}
      */

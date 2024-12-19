@@ -5,7 +5,7 @@ namespace App\Policies\V1;
 use App\Models\User;
 use App\Permissions\V1\Abilities;
 
-class AuthorTickets
+class AuthorTicketsPolicy
 {
     public function view(User $user): bool
     {

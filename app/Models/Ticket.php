@@ -48,6 +48,12 @@ class Ticket extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function engineer(): BelongsToMany
+    {
+        return $this->belongsToMany(User::class, 'assigned_tickets', 'ticket_id', 'user_id')
+            ->withTimestamps();
+    }
+
     public function scopeFilter(Builder $builder, QueryFilter $filters)
     {
         return $filters->apply($builder);

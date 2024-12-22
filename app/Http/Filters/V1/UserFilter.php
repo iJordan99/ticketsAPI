@@ -2,7 +2,7 @@
 
 namespace App\Http\Filters\V1;
 
-class AuthorFilter extends QueryFilter
+class UserFilter extends QueryFilter
 {
 
     protected $sortable = [
@@ -23,10 +23,10 @@ class AuthorFilter extends QueryFilter
         return $this->builder->whereDate('created_at', $value);
     }
 
-    public function include($value)
-    {
-        return $this->builder->with($value);
-    }
+//    public function include($value)
+//    {
+//        return $this->builder->with($value);
+//    }
 
     public function id($value)
     {

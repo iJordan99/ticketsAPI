@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Filters\V1\AuthorFilter;
+use App\Http\Filters\V1\UserFilter;
 use App\Http\Requests\Api\V1\ReplaceUserRequest;
 use App\Http\Requests\Api\V1\StoreUserRequest;
 use App\Http\Requests\Api\V1\UpdateUserRequest;
@@ -25,7 +25,7 @@ class UserController extends ApiController
      * @queryParam filter[email] Filter by email. Wildcards are supported. No-example
      *
      * */
-    public function index(AuthorFilter $filter)
+    public function index(UserFilter $filter)
     {
         Gate::authorize('view', User::class);
         return UserResource::collection(

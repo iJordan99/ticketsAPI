@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Filters\V1\TicketFilter;
+use App\Http\Requests\Api\V1\AssignEngineerRequest;
 use App\Http\Requests\Api\V1\ReplaceTicketRequest;
 use App\Http\Requests\Api\V1\StoreTicketRequest;
 use App\Http\Requests\Api\V1\UpdateTicketRequest;
@@ -68,7 +69,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Replace Ticket
+     * Replace a Ticket
      *
      * Replace the specified ticket in storage.
      *
@@ -85,7 +86,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Update Ticket
+     * Update a Ticket
      *
      * Update the specified ticket in storage.
      *
@@ -102,7 +103,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Delete ticket.
+     * Delete a ticket.
      *
      * Remove the specified resource from storage.
      *
@@ -116,5 +117,21 @@ class TicketController extends ApiController
         $ticket->delete();
 
         return $this->ok('Ticket deleted');
+    }
+
+    /**
+     * Assign an engineer
+     *
+     * Assigns an engineer to the provided ticket
+     * @group Tickets
+     */
+    public function assign(AssignEngineerRequest $request, Ticket $ticket)
+    {
+        $engineer = $request['data.attributes.engineer'];
+        Gate::authorize('assign', $ticket);
+
+        $ticket->engineer()->syncWithoutDetaching($engineer);
+
+        return new TicketResource($ticket->load('engineer'));
     }
 }

@@ -24,7 +24,12 @@ final class Abilities
     public const DeleteUser = 'user:delete';
 
     public const ViewAssignedTickets = 'ticket:assigned:view';
-    const ShowAssignedTicket = 'ticket:assigned:show';
+    const AssignEngineer = 'ticket:engineer:assign';
+    const ViewEngineer = 'engineer:view';
+    const ShowEngineer = 'engineer:show';
+
+    const ViewEngineerTickets = 'engineer:ticket:view';
+    const StoreEngineer = 'engineer:create';
 
     public static function getAbilities(User $user): array
     {
@@ -41,7 +46,20 @@ final class Abilities
                 self::DeleteUser,
                 self::ViewAuthor,
                 self::ViewAssignedTickets,
-                self::ShowAssignedTicket,
+                self::AssignEngineer,
+                self::ViewEngineer,
+                self::ShowEngineer,
+                self::ViewEngineerTickets,
+                self::StoreEngineer,
+            ];
+        } elseif ($user->isEngineer()) {
+            return [
+                self::ViewAuthorTicket,
+                self::UpdateAuthorTicket,
+                self::CreateAuthorTicket,
+                self::ReplaceAuthorTicket,
+                self::ViewAssignedTickets,
+                self::ViewEngineerTickets
             ];
         } else {
             return [

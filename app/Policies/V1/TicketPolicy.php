@@ -57,4 +57,10 @@ class TicketPolicy
 
         return false;
     }
+
+    public function assign(User $user): bool
+    {
+        return $user->tokenCan(Abilities::AssignEngineer);
+
+    }
 }

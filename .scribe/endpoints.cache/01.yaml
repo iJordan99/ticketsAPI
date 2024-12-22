@@ -62,7 +62,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"type":"ticket","id":1,"attributes":{"title":"velit","status":"X","priority":"high","reproduction_step":"Excepturi iste dolore culpa repudiandae. Minus consectetur dolorem quia quod ipsam omnis voluptatem. Quo est est at ipsum ut sit. Natus totam quia id et tempore.","error_code":";","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}},{"type":"ticket","id":100,"attributes":{"title":"iure","status":"X","priority":"medium","reproduction_step":"Doloremque consequatur voluptatem nulla dolores. Officia et odit officia voluptatem tempore fugiat et rerum. Cumque totam eaque facilis laboriosam quasi ut. Maiores quidem atque velit ex non quas.","error_code":"1","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/100"}},{"type":"ticket","id":3,"attributes":{"title":"pariatur","status":"C","priority":"medium","reproduction_step":"Temporibus autem et magni voluptatem voluptatibus ducimus. Distinctio natus sit ipsam ea dolores ipsum.","error_code":".","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/3"}},{"type":"ticket","id":4,"attributes":{"title":"accusamus","status":"H","priority":"medium","reproduction_step":"Odio quibusdam consequatur doloribus vel possimus fugiat. Officiis a eligendi suscipit.","error_code":"y","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/4"}},{"type":"ticket","id":5,"attributes":{"title":"quo","status":"H","priority":"medium","reproduction_step":"Accusantium veritatis inventore et. Quia adipisci ad qui at veniam. Laboriosam eius vero placeat a ullam odit. Sit eum deserunt fugiat placeat doloremque.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/5"}},{"type":"ticket","id":6,"attributes":{"title":"voluptas","status":"H","priority":"medium","reproduction_step":"Nobis recusandae tenetur dicta vero facilis aperiam velit sed. Earum quibusdam modi delectus pariatur aut. Incidunt et quos exercitationem. Alias asperiores autem natus autem fugiat hic.","error_code":"X","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/6"}},{"type":"ticket","id":7,"attributes":{"title":"autem","status":"X","priority":"medium","reproduction_step":"Quis quibusdam debitis possimus assumenda mollitia delectus. Cumque provident facere illo eos alias possimus. Tempore autem nihil quis reiciendis voluptatem.","error_code":"L","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/7"}},{"type":"ticket","id":8,"attributes":{"title":"minima","status":"C","priority":"medium","reproduction_step":"Velit culpa hic et. Repellat distinctio ex delectus ut. Qui non tenetur illum voluptas earum.","error_code":"U","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/8"}},{"type":"ticket","id":9,"attributes":{"title":"dignissimos","status":"C","priority":"medium","reproduction_step":"Tempore maiores aut architecto id ipsam cum. Amet quo expedita tempore ea et. Maiores eum laborum velit et distinctio autem.","error_code":"E","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/9"}},{"type":"ticket","id":10,"attributes":{"title":"quidem","status":"X","priority":"medium","reproduction_step":"Voluptas vel molestiae earum adipisci. Maxime ipsa quos harum qui id et. Cumque voluptas cum sunt maxime vel qui.","error_code":"l","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/10"}},{"type":"ticket","id":11,"attributes":{"title":"eaque","status":"H","priority":"medium","reproduction_step":"Veritatis ea sed cupiditate nulla. Occaecati quos esse esse adipisci accusamus et. Aperiam cum delectus fugit veniam quaerat vel facilis. Nemo dignissimos ut eligendi ex facere debitis labore.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/11"}},{"type":"ticket","id":12,"attributes":{"title":"quo","status":"C","priority":"medium","reproduction_step":"Quisquam molestiae quis facilis doloremque dolores. Officia eius dolores tempora ipsa. Ipsam eius numquam vero aliquam.","error_code":"d","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/12"}},{"type":"ticket","id":13,"attributes":{"title":"quam","status":"H","priority":"medium","reproduction_step":"Voluptatem minus ex in perferendis sit. Eum quia neque praesentium vero. Nemo voluptatem quidem pariatur aut qui. Enim sed eos at doloremque vel fuga nemo.","error_code":"''","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/13"}},{"type":"ticket","id":14,"attributes":{"title":"fugiat","status":"X","priority":"medium","reproduction_step":"Libero aut quae saepe accusamus et dignissimos. Laudantium doloremque atque perspiciatis laborum aut. Consectetur velit est non quis enim.","error_code":"2","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/14"}},{"type":"ticket","id":15,"attributes":{"title":"aut","status":"H","priority":"medium","reproduction_step":"Rerum enim quisquam omnis maiores vitae aliquid ut molestiae. Accusantium dolores deleniti pariatur animi quas modi velit. Itaque quia molestiae maxime facilis quos dicta aspernatur fugit.","error_code":"X","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/15"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","prev":null,"next":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":7,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=3","label":"3","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=4","label":"4","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=5","label":"5","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=6","label":"6","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","label":"7","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/tickets","per_page":15,"to":15,"total":100}}'
+        content: '{"data":[{"type":"ticket","id":1,"attributes":{"title":"et","status":"A","priority":null,"reproduction_step":"Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.","error_code":"7","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}},{"type":"ticket","id":2,"attributes":{"title":"quibusdam","status":"A","priority":null,"reproduction_step":"Quam voluptatem molestiae impedit tenetur ut consectetur reprehenderit. Est id cum explicabo nesciunt. Eveniet omnis cum cumque deleniti magni id.","error_code":"c","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/2"}},{"type":"ticket","id":3,"attributes":{"title":"placeat","status":"X","priority":null,"reproduction_step":"Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.","error_code":"@","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/3"}},{"type":"ticket","id":4,"attributes":{"title":"pariatur","status":"X","priority":null,"reproduction_step":"Quod dolore excepturi rerum maiores aperiam minima et. Est a deserunt officiis et enim sapiente. Asperiores sed quo incidunt eum. Quisquam et explicabo quaerat sequi.","error_code":"a","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/4"}},{"type":"ticket","id":5,"attributes":{"title":"atque","status":"C","priority":null,"reproduction_step":"Voluptatem debitis dolores quis vel qui ex quas iusto. Sint voluptas libero assumenda est. Et temporibus necessitatibus perspiciatis amet et.","error_code":"R","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/5"}},{"type":"ticket","id":6,"attributes":{"title":"doloremque","status":"A","priority":null,"reproduction_step":"Et porro minima nostrum quis et nam rem in. Vel quam rerum nisi sit asperiores. Consectetur consectetur ut quia saepe neque aut.","error_code":"b","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/6"}},{"type":"ticket","id":7,"attributes":{"title":"perferendis","status":"C","priority":null,"reproduction_step":"Et quod perferendis eaque ut neque sapiente mollitia iure. Quia ut itaque et aliquam ad aliquid placeat sed. Sed eos consequatur exercitationem recusandae.","error_code":"v","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/7"}},{"type":"ticket","id":8,"attributes":{"title":"omnis","status":"X","priority":null,"reproduction_step":"Omnis alias aliquam deserunt iure asperiores earum molestiae. Dignissimos necessitatibus cupiditate incidunt qui quia.","error_code":"O","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/8"}},{"type":"ticket","id":9,"attributes":{"title":"inventore","status":"A","priority":null,"reproduction_step":"Dolor cupiditate nam corrupti odio animi beatae labore. Aut velit suscipit itaque omnis. Illo explicabo et sunt. Sint eos id qui occaecati eligendi ipsam.","error_code":"R","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/9"}},{"type":"ticket","id":10,"attributes":{"title":"et","status":"X","priority":null,"reproduction_step":"Provident et qui fugit perspiciatis et ab. Et sed et consequatur natus. Nostrum ea excepturi excepturi sunt rerum animi. Non officia sunt ea id. Et maiores natus omnis laborum.","error_code":"q","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/10"}},{"type":"ticket","id":11,"attributes":{"title":"et","status":"A","priority":null,"reproduction_step":"Et ad officia vel est nisi aut et. Necessitatibus aut possimus nostrum est aut velit corporis perferendis. Ea doloremque eum nam similique harum. Accusamus at dolores natus velit. Unde at ex facere.","error_code":"U","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/11"}},{"type":"ticket","id":12,"attributes":{"title":"error","status":"C","priority":null,"reproduction_step":"Repellat itaque iusto rerum aut consequatur beatae placeat. Aspernatur autem voluptatem ea corporis odit omnis. Sequi ex iure similique labore.","error_code":"&","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/12"}},{"type":"ticket","id":13,"attributes":{"title":"qui","status":"C","priority":null,"reproduction_step":"Et accusamus iusto quibusdam et qui doloremque qui consequatur. Ab quae eos illum eaque. Id eos sed nulla perspiciatis incidunt et. Nulla voluptas et aperiam rerum.","error_code":"1","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/13"}},{"type":"ticket","id":14,"attributes":{"title":"vel","status":"X","priority":null,"reproduction_step":"Et sunt eveniet fuga dicta et. Aut ex est ex aut magnam reiciendis omnis. Et aut tempora nesciunt qui repellendus voluptatem.","error_code":"h","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/14"}},{"type":"ticket","id":15,"attributes":{"title":"qui","status":"C","priority":null,"reproduction_step":"Repellendus sint natus accusantium accusamus sit. Quia molestias quam cupiditate repellat repellat dolores sapiente. In omnis ducimus voluptas vitae. Ab eaque odio non eum iure.","error_code":"A","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/15"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","prev":null,"next":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2"},"meta":{"current_page":1,"from":1,"last_page":7,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","label":"1","active":true},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"2","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=3","label":"3","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=4","label":"4","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=5","label":"5","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=6","label":"6","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=7","label":"7","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=2","label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/tickets","per_page":15,"to":15,"total":100}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -73,7 +73,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -215,7 +215,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -258,7 +258,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"type":"ticket","id":1,"attributes":{"title":"velit","description":"Quibusdam sint quis esse ullam quia corrupti. Quasi sit eos ducimus cupiditate velit beatae ducimus. Fugit ut quos voluptatem adipisci.","status":"X","priority":"high","reproduction_step":"Excepturi iste dolore culpa repudiandae. Minus consectetur dolorem quia quod ipsam omnis voluptatem. Quo est est at ipsum ut sit. Natus totam quia id et tempore.","error_code":";","created_at":"2024-12-18T06:31:49.000000Z","updated_at":"2024-12-18T06:31:49.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}}}'
+        content: '{"data":{"type":"ticket","id":1,"attributes":{"title":"et","description":"Pariatur magni fugit sit. Distinctio et recusandae dolorem eum. Suscipit minima aliquid incidunt numquam sunt non ut nesciunt.","status":"A","priority":null,"reproduction_step":"Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.","error_code":"7","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -269,7 +269,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -283,7 +283,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Replace Ticket'
+      title: 'Replace a Ticket'
       description: 'Replace the specified ticket in storage.'
       authenticated: true
       custom: []
@@ -331,7 +331,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: true
-        example: ad
+        example: necessitatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -341,7 +341,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: true
-        example: 'Et corrupti reiciendis nostrum est error.'
+        example: 'Voluptate quia repellendus eos a praesentium ratione atque.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -351,7 +351,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: X
+        example: H
         type: string
         enumValues:
           - A
@@ -365,7 +365,7 @@ endpoints:
         name: data.attributes.priority
         description: 'Must be at least 1. Must not be greater than 3.'
         required: false
-        example: 1
+        example: 2
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -414,10 +414,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: ad
-          description: 'Et corrupti reiciendis nostrum est error.'
-          status: X
-          priority: 1
+          title: necessitatibus
+          description: 'Voluptate quia repellendus eos a praesentium ratione atque.'
+          status: H
+          priority: 2
         relationships:
           author:
             data:
@@ -428,7 +428,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -442,7 +442,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Update Ticket'
+      title: 'Update a Ticket'
       description: 'Update the specified ticket in storage.'
       authenticated: true
       custom: []
@@ -490,7 +490,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: false
-        example: libero
+        example: architecto
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -500,7 +500,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: false
-        example: 'Dolores rem ratione optio non.'
+        example: 'Aut et repellendus quaerat dicta consequatur ab ut ut.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -510,7 +510,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: false
-        example: C
+        example: A
         type: string
         enumValues:
           - A
@@ -570,7 +570,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: false
-        example: 7
+        example: 9
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -579,21 +579,21 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: libero
-          description: 'Dolores rem ratione optio non.'
-          status: C
+          title: architecto
+          description: 'Aut et repellendus quaerat dicta consequatur ab ut ut.'
+          status: A
           priority: Low
         relationships:
           author:
             data:
-              id: 7
+              id: 9
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -607,7 +607,7 @@ endpoints:
       groupDescription: ''
       subgroup: ''
       subgroupDescription: ''
-      title: 'Delete ticket.'
+      title: 'Delete a ticket.'
       description: 'Remove the specified resource from storage.'
       authenticated: true
       custom: []
@@ -638,7 +638,85 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: 'api/v1/tickets/{ticket_id}/engineer'
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Assign an engineer'
+      description: 'Assigns an engineer to the provided ticket'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      ticket_id:
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ticket_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.engineer:
+        name: data.attributes.engineer
+        description: 'The <code>id</code> of an existing record in the users table. The <code>user_id</code> of an existing record in the engineers table.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          engineer: 11
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null

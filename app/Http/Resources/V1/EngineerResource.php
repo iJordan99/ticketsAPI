@@ -18,12 +18,11 @@ class EngineerResource extends JsonResource
             'type' => 'engineer',
             'id' => $this->id,
             'attributes' => [
-                'ticket' => $this->pivot->ticket_id,
-                'engineer' => $this->pivot->user_id,
-                'assigned_at' => $this->pivot->created_at
+                'name' => $this->name,
+                'email' => $this->email,
             ],
             'links' => [
-                'self' => route('engineer.tickets'),
+                'self' => route('engineers.show', $this),
             ]
         ];
     }

@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Filters\V1\AuthorFilter;
+use App\Http\Filters\V1\UserFilter;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
 use App\Policies\V1\UserPolicy;
@@ -19,11 +19,14 @@ class AuthorsController extends ApiController
      *
      * @group Authors
      */
-    public function index(AuthorFilter $filters)
+    public function index(UserFilter $filters)
     {
         Gate::authorize('view', User::class);
+        
         return UserResource::collection(
-            User::has('tickets')->filter($filters)->paginate()
+            User::has('tickets')
+                ->filter($filters)
+                ->paginate()
         );
     }
 
@@ -37,6 +40,9 @@ class AuthorsController extends ApiController
     public function show(User $author)
     {
         Gate::authorize('view', User::class);
+
+        $includes = $this->getIncluded();
+        $author->load($includes);
         return new UserResource($author);
     }
 

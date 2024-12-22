@@ -46,7 +46,7 @@ endpoints:
         name: 'filter[name]'
         description: 'Filter by name. Wildcards are supported.'
         required: false
-        example: officia
+        example: asperiores
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -56,7 +56,7 @@ endpoints:
         name: 'filter[email]'
         description: 'Filter by email. Wildcards are supported.'
         required: false
-        example: sunt
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -64,8 +64,8 @@ endpoints:
         custom: []
     cleanQueryParameters:
       sort: sort=name
-      'filter[name]': officia
-      'filter[email]': sunt
+      'filter[name]': asperiores
+      'filter[email]': et
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
@@ -162,7 +162,7 @@ endpoints:
         name: data.attributes.priority
         description: ''
         required: true
-        example: medium
+        example: high
         type: string
         enumValues:
           - low
@@ -186,7 +186,7 @@ endpoints:
         attributes:
           title: 'Unable to Access Email on Outlook'
           description: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."'
-          priority: medium
+          priority: high
       author: 1
     fileParameters: []
     responses: []
@@ -329,7 +329,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: true
-        example: eos
+        example: nesciunt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -339,7 +339,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: true
-        example: 'Et non asperiores facere nostrum ab.'
+        example: 'Sint eveniet alias aspernatur et suscipit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -349,7 +349,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: X
+        example: A
         type: string
         enumValues:
           - A
@@ -363,7 +363,7 @@ endpoints:
         name: data.attributes.priority
         description: 'Must be at least 1. Must not be greater than 3.'
         required: false
-        example: 2
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -403,7 +403,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: true
-        example: 4
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -412,14 +412,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: eos
-          description: 'Et non asperiores facere nostrum ab.'
-          status: X
-          priority: 2
+          title: nesciunt
+          description: 'Sint eveniet alias aspernatur et suscipit.'
+          status: A
+          priority: 1
         relationships:
           author:
             data:
-              id: 4
+              id: 8
     fileParameters: []
     responses:
       -
@@ -505,7 +505,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: false
-        example: impedit
+        example: optio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -515,7 +515,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: false
-        example: 'Placeat et et deleniti aspernatur repudiandae assumenda.'
+        example: 'Sint fugiat repellendus iste eaque culpa.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -585,7 +585,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: false
-        example: 14
+        example: 20
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -594,14 +594,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: impedit
-          description: 'Placeat et et deleniti aspernatur repudiandae assumenda.'
+          title: optio
+          description: 'Sint fugiat repellendus iste eaque culpa.'
           status: X
           priority: medium
         relationships:
           author:
             data:
-              id: 14
+              id: 20
     fileParameters: []
     responses: []
     responseFields: []

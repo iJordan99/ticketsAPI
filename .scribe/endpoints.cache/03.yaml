@@ -30,13 +30,80 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"type":"engineer","id":11,"attributes":{"name":"The Manager","email":"manager@manager.com"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/engineers\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineers","per_page":15,"to":1,"total":1}}'
+        content: '{"data":[{"type":"engineer","id":2,"attributes":{"name":"Junior Runolfsson","email":"libby53@example.org"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/engineers\/2"}},{"type":"engineer","id":11,"attributes":{"name":"The Manager","email":"manager@manager.com"},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/engineers\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineers","per_page":15,"to":2,"total":2}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
         custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/engineers
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.user:
+        name: data.attributes.user
+        description: 'The <code>id</code> of an existing record in the users table.'
+        required: true
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          user: 14
+    fileParameters: []
+    responses: []
     responseFields: []
     auth:
       - headers

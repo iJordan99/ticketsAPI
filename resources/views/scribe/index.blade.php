@@ -731,6 +731,18 @@
                                                                             </div>
                                                                     <div class="expandable">
                                         <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
+                                             id="toc-item-endpoints-POSTapi-v1-engineers">
+                                            <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="POST api/v1/engineers">
+                                                <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
+                                                   href="#endpoints-POSTapi-v1-engineers">
+                                                    POST api/v1/engineers
+                                                </a>
+                                            </div>
+                                                                                    </div>
+
+                                                                            </div>
+                                                                    <div class="expandable">
+                                        <div class="sl-flex sl-items-center sl-h-md sl-pr-4 sl-pl-8 sl-bg-canvas-100 hover:sl-bg-canvas-200 sl-cursor-pointer sl-select-none"
                                              id="toc-item-endpoints-GETapi-v1-engineers--user_id-">
                                             <div class="sl-flex-1 sl-items-center sl-truncate sl-mr-1.5 sl-p-0" title="GET api/v1/engineers/{user_id}">
                                                 <a class="ElementsTableOfContentsItem sl-block sl-no-underline"
@@ -747,7 +759,7 @@
 
         </div>
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
-            Last updated: December 21, 2024
+            Last updated: December 22, 2024
         </div>
 
         <div class="sl-flex sl-items-center sl-px-4 sl-py-3 sl-border-t">
@@ -903,7 +915,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        blarson@example.net
+                        mayert.nico@example.com
                     </div>
                 </div>
             </div>
@@ -930,7 +942,7 @@ You can switch the language used with the tabs at the top right (or from the nav
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        &quot;ji_H9,E5sLauB)$O
+                        q3*39Gk
                     </div>
                 </div>
             </div>
@@ -1024,8 +1036,8 @@ You can switch the language used with the tabs at the top right (or from the nav
                                      id="json-body-POSTapi-login"
                                      style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
                                 >{
-    "email": "blarson@example.net",
-    "password": "\"ji_H9,E5sLauB)$O"
+    "email": "mayert.nico@example.com",
+    "password": "q3*39Gk"
 }</div>
                             </div>
                                             </div>
@@ -1126,8 +1138,8 @@ const headers = {
 };
 
 let body = {
-    "email": "blarson@example.net",
-    "password": "\"ji_H9,E5sLauB)$O"
+    "email": "mayert.nico@example.com",
+    "password": "q3*39Gk"
 };
 
 fetch(url, {
@@ -1151,8 +1163,8 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'email' =&gt; 'blarson@example.net',
-            'password' =&gt; '"ji_H9,E5sLauB)$O',
+            'email' =&gt; 'mayert.nico@example.com',
+            'password' =&gt; 'q3*39Gk',
         ],
     ]
 );
@@ -1749,6 +1761,50 @@ print_r(json_decode((string) $body));</code></pre>                              
             </div>
             </div>
 </div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">assigned</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Filter by assigned/unassigned : True,False.,Yes,No,1, 0</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        True
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                            <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">include</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>Return resource with included relationship: author, engineer.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        author
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
                                                                 </div>
                         </div>
                     
@@ -1906,6 +1962,32 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             >
                                                                             </div>
                                 </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETapi-v1-tickets-assigned">assigned</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="assigned" name="assigned"
+                                                   id="queryparam-GETapi-v1-tickets-assigned"
+                                                   placeholder="Filter by assigned/unassigned : True,False.,Yes,No,1, 0"
+                                                   value="True" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="queryparam-GETapi-v1-tickets-include">include</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                                                                    <input aria-label="include" name="include"
+                                                   id="queryparam-GETapi-v1-tickets-include"
+                                                   placeholder="Return resource with included relationship: author, engineer."
+                                                   value="author" data-component="query"
+                                                   class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
+                                            >
+                                                                            </div>
+                                </div>
                                                     </div>
                     </div>
                 </div>
@@ -2003,6 +2085,8 @@ You can check the Dev Tools console for debugging information.</p>
 const params = {
     "sort": "sort=title,-createdAt",
     "filter[title]": "*fix*",
+    "assigned": "True",
+    "include": "author",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -2036,6 +2120,8 @@ $response = $client-&gt;get(
         'query' =&gt; [
             'sort' =&gt; 'sort=title,-createdAt',
             'filter[title]' =&gt; '*fix*',
+            'assigned' =&gt; 'True',
+            'include' =&gt; 'author',
         ],
     ]
 );
@@ -2106,17 +2192,60 @@ print_r(json_decode((string) $body));</code></pre>                              
     &quot;data&quot;: [
         {
             &quot;type&quot;: &quot;ticket&quot;,
+            &quot;id&quot;: 3,
+            &quot;attributes&quot;: {
+                &quot;title&quot;: &quot;placeat&quot;,
+                &quot;status&quot;: &quot;X&quot;,
+                &quot;priority&quot;: &quot;low&quot;,
+                &quot;reproduction_step&quot;: &quot;Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.&quot;,
+                &quot;error_code&quot;: &quot;@&quot;,
+                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
+                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
+            },
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 4,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Drake Lowe&quot;,
+                        &quot;email&quot;: &quot;ycassin@example.net&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/4&quot;
+                    }
+                }
+            },
+            &quot;links&quot;: {
+                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/3&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;ticket&quot;,
             &quot;id&quot;: 1,
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;et&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.&quot;,
                 &quot;error_code&quot;: &quot;7&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 9,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Justyn Frami&quot;,
+                        &quot;email&quot;: &quot;joanny61@example.com&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/9&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/1&quot;
             }
@@ -2127,32 +2256,28 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;quibusdam&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quam voluptatem molestiae impedit tenetur ut consectetur reprehenderit. Est id cum explicabo nesciunt. Eveniet omnis cum cumque deleniti magni id.&quot;,
                 &quot;error_code&quot;: &quot;c&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 5,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Rory Keebler&quot;,
+                        &quot;email&quot;: &quot;name92@example.com&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/5&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/2&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 3,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;placeat&quot;,
-                &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.&quot;,
-                &quot;error_code&quot;: &quot;@&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/3&quot;
             }
         },
         {
@@ -2161,13 +2286,26 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;pariatur&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quod dolore excepturi rerum maiores aperiam minima et. Est a deserunt officiis et enim sapiente. Asperiores sed quo incidunt eum. Quisquam et explicabo quaerat sequi.&quot;,
                 &quot;error_code&quot;: &quot;a&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 2,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Junior Runolfsson&quot;,
+                        &quot;email&quot;: &quot;libby53@example.org&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/2&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/4&quot;
             }
@@ -2178,13 +2316,26 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;atque&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Voluptatem debitis dolores quis vel qui ex quas iusto. Sint voluptas libero assumenda est. Et temporibus necessitatibus perspiciatis amet et.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 8,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Cassie Terry&quot;,
+                        &quot;email&quot;: &quot;eliza.crona@example.net&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/8&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/5&quot;
             }
@@ -2195,13 +2346,26 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;doloremque&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et porro minima nostrum quis et nam rem in. Vel quam rerum nisi sit asperiores. Consectetur consectetur ut quia saepe neque aut.&quot;,
                 &quot;error_code&quot;: &quot;b&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 4,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Drake Lowe&quot;,
+                        &quot;email&quot;: &quot;ycassin@example.net&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/4&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/6&quot;
             }
@@ -2212,13 +2376,26 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;perferendis&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et quod perferendis eaque ut neque sapiente mollitia iure. Quia ut itaque et aliquam ad aliquid placeat sed. Sed eos consequatur exercitationem recusandae.&quot;,
                 &quot;error_code&quot;: &quot;v&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 9,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Justyn Frami&quot;,
+                        &quot;email&quot;: &quot;joanny61@example.com&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/9&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/7&quot;
             }
@@ -2229,13 +2406,26 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;omnis&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Omnis alias aliquam deserunt iure asperiores earum molestiae. Dignissimos necessitatibus cupiditate incidunt qui quia.&quot;,
                 &quot;error_code&quot;: &quot;O&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 7,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Rozella Casper&quot;,
+                        &quot;email&quot;: &quot;hailee19@example.com&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/7&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/8&quot;
             }
@@ -2246,130 +2436,41 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;attributes&quot;: {
                 &quot;title&quot;: &quot;inventore&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Dolor cupiditate nam corrupti odio animi beatae labore. Aut velit suscipit itaque omnis. Illo explicabo et sunt. Sint eos id qui occaecati eligendi ipsam.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
                 &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
             },
-            &quot;includes&quot;: [],
+            &quot;includes&quot;: {
+                &quot;author&quot;: {
+                    &quot;type&quot;: &quot;user&quot;,
+                    &quot;id&quot;: 10,
+                    &quot;attributes&quot;: {
+                        &quot;name&quot;: &quot;Aliya Mueller&quot;,
+                        &quot;email&quot;: &quot;mason78@example.net&quot;,
+                        &quot;is_admin&quot;: false
+                    },
+                    &quot;links&quot;: {
+                        &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/authors/10&quot;
+                    }
+                }
+            },
             &quot;links&quot;: {
                 &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/9&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 10,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;et&quot;,
-                &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Provident et qui fugit perspiciatis et ab. Et sed et consequatur natus. Nostrum ea excepturi excepturi sunt rerum animi. Non officia sunt ea id. Et maiores natus omnis laborum.&quot;,
-                &quot;error_code&quot;: &quot;q&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/10&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 11,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;et&quot;,
-                &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Et ad officia vel est nisi aut et. Necessitatibus aut possimus nostrum est aut velit corporis perferendis. Ea doloremque eum nam similique harum. Accusamus at dolores natus velit. Unde at ex facere.&quot;,
-                &quot;error_code&quot;: &quot;U&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/11&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 12,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;error&quot;,
-                &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Repellat itaque iusto rerum aut consequatur beatae placeat. Aspernatur autem voluptatem ea corporis odit omnis. Sequi ex iure similique labore.&quot;,
-                &quot;error_code&quot;: &quot;&amp;&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/12&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 13,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;qui&quot;,
-                &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Et accusamus iusto quibusdam et qui doloremque qui consequatur. Ab quae eos illum eaque. Id eos sed nulla perspiciatis incidunt et. Nulla voluptas et aperiam rerum.&quot;,
-                &quot;error_code&quot;: &quot;1&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/13&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 14,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;vel&quot;,
-                &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Et sunt eveniet fuga dicta et. Aut ex est ex aut magnam reiciendis omnis. Et aut tempora nesciunt qui repellendus voluptatem.&quot;,
-                &quot;error_code&quot;: &quot;h&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/14&quot;
-            }
-        },
-        {
-            &quot;type&quot;: &quot;ticket&quot;,
-            &quot;id&quot;: 15,
-            &quot;attributes&quot;: {
-                &quot;title&quot;: &quot;qui&quot;,
-                &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
-                &quot;reproduction_step&quot;: &quot;Repellendus sint natus accusantium accusamus sit. Quia molestias quam cupiditate repellat repellat dolores sapiente. In omnis ducimus voluptas vitae. Ab eaque odio non eum iure.&quot;,
-                &quot;error_code&quot;: &quot;A&quot;,
-                &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
-                &quot;updated_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;
-            },
-            &quot;includes&quot;: [],
-            &quot;links&quot;: {
-                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/tickets/15&quot;
             }
         }
     ],
     &quot;links&quot;: {
         &quot;first&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=1&quot;,
-        &quot;last&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=7&quot;,
+        &quot;last&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=1&quot;,
         &quot;prev&quot;: null,
-        &quot;next&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=2&quot;
+        &quot;next&quot;: null
     },
     &quot;meta&quot;: {
         &quot;current_page&quot;: 1,
         &quot;from&quot;: 1,
-        &quot;last_page&quot;: 7,
+        &quot;last_page&quot;: 1,
         &quot;links&quot;: [
             {
                 &quot;url&quot;: null,
@@ -2382,45 +2483,15 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;active&quot;: true
             },
             {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=2&quot;,
-                &quot;label&quot;: &quot;2&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=3&quot;,
-                &quot;label&quot;: &quot;3&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=4&quot;,
-                &quot;label&quot;: &quot;4&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=5&quot;,
-                &quot;label&quot;: &quot;5&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=6&quot;,
-                &quot;label&quot;: &quot;6&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=7&quot;,
-                &quot;label&quot;: &quot;7&quot;,
-                &quot;active&quot;: false
-            },
-            {
-                &quot;url&quot;: &quot;http://tickets-laracast.test/api/v1/tickets?page=2&quot;,
+                &quot;url&quot;: null,
                 &quot;label&quot;: &quot;Next &amp;raquo;&quot;,
                 &quot;active&quot;: false
             }
         ],
         &quot;path&quot;: &quot;http://tickets-laracast.test/api/v1/tickets&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 15,
-        &quot;total&quot;: 100
+        &quot;to&quot;: 9,
+        &quot;total&quot;: 9
     }
 }</code></pre>
                                                                             </div>
@@ -3592,7 +3663,7 @@ print_r(json_decode((string) $body));</code></pre>                              
             &quot;title&quot;: &quot;et&quot;,
             &quot;description&quot;: &quot;Pariatur magni fugit sit. Distinctio et recusandae dolorem eum. Suscipit minima aliquid incidunt numquam sunt non ut nesciunt.&quot;,
             &quot;status&quot;: &quot;A&quot;,
-            &quot;priority&quot;: null,
+            &quot;priority&quot;: &quot;low&quot;,
             &quot;reproduction_step&quot;: &quot;Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.&quot;,
             &quot;error_code&quot;: &quot;7&quot;,
             &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -3813,7 +3884,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        necessitatibus
+                        voluptatibus
                     </div>
                 </div>
             </div>
@@ -3837,7 +3908,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Voluptate quia repellendus eos a praesentium ratione atque.
+                        Earum qui accusamus inventore est dolorum qui voluptate nisi.
                     </div>
                 </div>
             </div>
@@ -3986,7 +4057,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        19
+                        1
                     </div>
                 </div>
             </div>
@@ -4159,15 +4230,15 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "title": "necessitatibus",
-            "description": "Voluptate quia repellendus eos a praesentium ratione atque.",
+            "title": "voluptatibus",
+            "description": "Earum qui accusamus inventore est dolorum qui voluptate nisi.",
             "status": "H",
             "priority": 2
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 19
+                    "id": 1
                 }
             }
         }
@@ -4275,15 +4346,15 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "title": "necessitatibus",
-            "description": "Voluptate quia repellendus eos a praesentium ratione atque.",
+            "title": "voluptatibus",
+            "description": "Earum qui accusamus inventore est dolorum qui voluptate nisi.",
             "status": "H",
             "priority": 2
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 19
+                    "id": 1
                 }
             }
         }
@@ -4314,15 +4385,15 @@ $response = $client-&gt;put(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'title' =&gt; 'necessitatibus',
-                    'description' =&gt; 'Voluptate quia repellendus eos a praesentium ratione atque.',
+                    'title' =&gt; 'voluptatibus',
+                    'description' =&gt; 'Earum qui accusamus inventore est dolorum qui voluptate nisi.',
                     'status' =&gt; 'H',
                     'priority' =&gt; 2,
                 ],
                 'relationships' =&gt; [
                     'author' =&gt; [
                         'data' =&gt; [
-                            'id' =&gt; 19,
+                            'id' =&gt; 1,
                         ],
                     ],
                 ],
@@ -4536,7 +4607,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        architecto
+                        ipsam
                     </div>
                 </div>
             </div>
@@ -4558,7 +4629,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Aut et repellendus quaerat dicta consequatur ab ut ut.
+                        Quia ullam modi accusamus earum perspiciatis.
                     </div>
                 </div>
             </div>
@@ -4582,7 +4653,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        A
+                        H
                     </div>
                 </div>
             </div>
@@ -4606,7 +4677,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Low
+                        low
                     </div>
                 </div>
             </div>
@@ -4696,7 +4767,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        9
+                        14
                     </div>
                 </div>
             </div>
@@ -4869,15 +4940,15 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "title": "architecto",
-            "description": "Aut et repellendus quaerat dicta consequatur ab ut ut.",
-            "status": "A",
-            "priority": "Low"
+            "title": "ipsam",
+            "description": "Quia ullam modi accusamus earum perspiciatis.",
+            "status": "H",
+            "priority": "low"
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 9
+                    "id": 14
                 }
             }
         }
@@ -4985,15 +5056,15 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "title": "architecto",
-            "description": "Aut et repellendus quaerat dicta consequatur ab ut ut.",
-            "status": "A",
-            "priority": "Low"
+            "title": "ipsam",
+            "description": "Quia ullam modi accusamus earum perspiciatis.",
+            "status": "H",
+            "priority": "low"
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 9
+                    "id": 14
                 }
             }
         }
@@ -5024,15 +5095,15 @@ $response = $client-&gt;patch(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'title' =&gt; 'architecto',
-                    'description' =&gt; 'Aut et repellendus quaerat dicta consequatur ab ut ut.',
-                    'status' =&gt; 'A',
-                    'priority' =&gt; 'Low',
+                    'title' =&gt; 'ipsam',
+                    'description' =&gt; 'Quia ullam modi accusamus earum perspiciatis.',
+                    'status' =&gt; 'H',
+                    'priority' =&gt; 'low',
                 ],
                 'relationships' =&gt; [
                     'author' =&gt; [
                         'data' =&gt; [
-                            'id' =&gt; 9,
+                            'id' =&gt; 14,
                         ],
                     ],
                 ],
@@ -5648,7 +5719,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        11
+                        6
                     </div>
                 </div>
             </div>
@@ -5817,7 +5888,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "engineer": 11
+            "engineer": 6
         }
     }
 }</div>
@@ -5923,7 +5994,7 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "engineer": 11
+            "engineer": 6
         }
     }
 };
@@ -5952,7 +6023,7 @@ $response = $client-&gt;post(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'engineer' =&gt; 11,
+                    'engineer' =&gt; 6,
                 ],
             ],
         ],
@@ -6143,7 +6214,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        officia
+                        asperiores
                     </div>
                 </div>
             </div>
@@ -6165,7 +6236,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sunt
+                        et
                     </div>
                 </div>
             </div>
@@ -6343,7 +6414,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="filter[name]" name="filter[name]"
                                                    id="queryparam-GETapi-v1-authors--author_id--tickets-filter[name]"
                                                    placeholder="Filter by name. Wildcards are supported."
-                                                   value="officia" data-component="query"
+                                                   value="asperiores" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -6356,7 +6427,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="filter[email]" name="filter[email]"
                                                    id="queryparam-GETapi-v1-authors--author_id--tickets-filter[email]"
                                                    placeholder="Filter by email. Wildcards are supported."
-                                                   value="sunt" data-component="query"
+                                                   value="et" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -6457,8 +6528,8 @@ You can check the Dev Tools console for debugging information.</p>
 
 const params = {
     "sort": "sort=name",
-    "filter[name]": "officia",
-    "filter[email]": "sunt",
+    "filter[name]": "asperiores",
+    "filter[email]": "et",
 };
 Object.keys(params)
     .forEach(key =&gt; url.searchParams.append(key, params[key]));
@@ -6491,8 +6562,8 @@ $response = $client-&gt;get(
         ],
         'query' =&gt; [
             'sort' =&gt; 'sort=name',
-            'filter[name]' =&gt; 'officia',
-            'filter[email]' =&gt; 'sunt',
+            'filter[name]' =&gt; 'asperiores',
+            'filter[email]' =&gt; 'et',
         ],
     ]
 );
@@ -6843,7 +6914,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        medium
+                        high
                     </div>
                 </div>
             </div>
@@ -7041,7 +7112,7 @@ print_r(json_decode((string) $body));</code></pre>                              
         "attributes": {
             "title": "Unable to Access Email on Outlook",
             "description": "Unable to access my company email account using Outlook on my work laptop i receive the following error message \u201cCannot connect to the server.\"",
-            "priority": "medium"
+            "priority": "high"
         }
     },
     "author": 1
@@ -7150,7 +7221,7 @@ let body = {
         "attributes": {
             "title": "Unable to Access Email on Outlook",
             "description": "Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server.\"",
-            "priority": "medium"
+            "priority": "high"
         }
     },
     "author": 1
@@ -7182,7 +7253,7 @@ $response = $client-&gt;post(
                 'attributes' =&gt; [
                     'title' =&gt; 'Unable to Access Email on Outlook',
                     'description' =&gt; 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."',
-                    'priority' =&gt; 'medium',
+                    'priority' =&gt; 'high',
                 ],
             ],
             'author' =&gt; 1,
@@ -7859,7 +7930,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        eos
+                        nesciunt
                     </div>
                 </div>
             </div>
@@ -7883,7 +7954,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Et non asperiores facere nostrum ab.
+                        Sint eveniet alias aspernatur et suscipit.
                     </div>
                 </div>
             </div>
@@ -7909,7 +7980,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        X
+                        A
                     </div>
                 </div>
             </div>
@@ -7934,7 +8005,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        2
+                        1
                     </div>
                 </div>
             </div>
@@ -8032,7 +8103,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        4
+                        8
                     </div>
                 </div>
             </div>
@@ -8217,15 +8288,15 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "title": "eos",
-            "description": "Et non asperiores facere nostrum ab.",
-            "status": "X",
-            "priority": 2
+            "title": "nesciunt",
+            "description": "Sint eveniet alias aspernatur et suscipit.",
+            "status": "A",
+            "priority": 1
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 4
+                    "id": 8
                 }
             }
         }
@@ -8333,15 +8404,15 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "title": "eos",
-            "description": "Et non asperiores facere nostrum ab.",
-            "status": "X",
-            "priority": 2
+            "title": "nesciunt",
+            "description": "Sint eveniet alias aspernatur et suscipit.",
+            "status": "A",
+            "priority": 1
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 4
+                    "id": 8
                 }
             }
         }
@@ -8372,15 +8443,15 @@ $response = $client-&gt;put(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'title' =&gt; 'eos',
-                    'description' =&gt; 'Et non asperiores facere nostrum ab.',
-                    'status' =&gt; 'X',
-                    'priority' =&gt; 2,
+                    'title' =&gt; 'nesciunt',
+                    'description' =&gt; 'Sint eveniet alias aspernatur et suscipit.',
+                    'status' =&gt; 'A',
+                    'priority' =&gt; 1,
                 ],
                 'relationships' =&gt; [
                     'author' =&gt; [
                         'data' =&gt; [
-                            'id' =&gt; 4,
+                            'id' =&gt; 8,
                         ],
                     ],
                 ],
@@ -8665,7 +8736,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        impedit
+                        optio
                     </div>
                 </div>
             </div>
@@ -8687,7 +8758,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        Placeat et et deleniti aspernatur repudiandae assumenda.
+                        Sint fugiat repellendus iste eaque culpa.
                     </div>
                 </div>
             </div>
@@ -8825,7 +8896,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        14
+                        20
                     </div>
                 </div>
             </div>
@@ -9010,15 +9081,15 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "title": "impedit",
-            "description": "Placeat et et deleniti aspernatur repudiandae assumenda.",
+            "title": "optio",
+            "description": "Sint fugiat repellendus iste eaque culpa.",
             "status": "X",
             "priority": "medium"
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 14
+                    "id": 20
                 }
             }
         }
@@ -9126,15 +9197,15 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "title": "impedit",
-            "description": "Placeat et et deleniti aspernatur repudiandae assumenda.",
+            "title": "optio",
+            "description": "Sint fugiat repellendus iste eaque culpa.",
             "status": "X",
             "priority": "medium"
         },
         "relationships": {
             "author": {
                 "data": {
-                    "id": 14
+                    "id": 20
                 }
             }
         }
@@ -9165,15 +9236,15 @@ $response = $client-&gt;patch(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'title' =&gt; 'impedit',
-                    'description' =&gt; 'Placeat et et deleniti aspernatur repudiandae assumenda.',
+                    'title' =&gt; 'optio',
+                    'description' =&gt; 'Sint fugiat repellendus iste eaque culpa.',
                     'status' =&gt; 'X',
                     'priority' =&gt; 'medium',
                 ],
                 'relationships' =&gt; [
                     'author' =&gt; [
                         'data' =&gt; [
-                            'id' =&gt; 14,
+                            'id' =&gt; 20,
                         ],
                     ],
                 ],
@@ -10054,7 +10125,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        distinctio
+                        laudantium
                     </div>
                 </div>
             </div>
@@ -10081,7 +10152,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        qreilly@example.org
+                        weldon.lindgren@example.org
                     </div>
                 </div>
             </div>
@@ -10105,7 +10176,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        true
+                        false
                     </div>
                 </div>
             </div>
@@ -10129,7 +10200,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        8Gd[tBI
+                        HA*|n,`h~AIg?kq]v:Z
                     </div>
                 </div>
             </div>
@@ -10265,10 +10336,10 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "name": "distinctio",
-            "email": "qreilly@example.org",
-            "isAdmin": true,
-            "password": "8Gd[tBI"
+            "name": "laudantium",
+            "email": "weldon.lindgren@example.org",
+            "isAdmin": false,
+            "password": "HA*|n,`h~AIg?kq]v:Z"
         }
     }
 }</div>
@@ -10374,10 +10445,10 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "name": "distinctio",
-            "email": "qreilly@example.org",
-            "isAdmin": true,
-            "password": "8Gd[tBI"
+            "name": "laudantium",
+            "email": "weldon.lindgren@example.org",
+            "isAdmin": false,
+            "password": "HA*|n,`h~AIg?kq]v:Z"
         }
     }
 };
@@ -10406,10 +10477,10 @@ $response = $client-&gt;post(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'name' =&gt; 'distinctio',
-                    'email' =&gt; 'qreilly@example.org',
-                    'isAdmin' =&gt; true,
-                    'password' =&gt; '8Gd[tBI',
+                    'name' =&gt; 'laudantium',
+                    'email' =&gt; 'weldon.lindgren@example.org',
+                    'isAdmin' =&gt; false,
+                    'password' =&gt; 'HA*|n,`h~AIg?kq]v:Z',
                 ],
             ],
         ],
@@ -11574,7 +11645,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        sint
+                        exercitationem
                     </div>
                 </div>
             </div>
@@ -11599,7 +11670,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        rafael09@example.net
+                        xjakubowski@example.net
                     </div>
                 </div>
             </div>
@@ -11623,7 +11694,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        false
+                        true
                     </div>
                 </div>
             </div>
@@ -11647,7 +11718,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        O)fGn+:ZS5RD
+                        :}v${Z
                     </div>
                 </div>
             </div>
@@ -11816,10 +11887,10 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "name": "sint",
-            "email": "rafael09@example.net",
-            "isAdmin": false,
-            "password": "O)fGn+:ZS5RD"
+            "name": "exercitationem",
+            "email": "xjakubowski@example.net",
+            "isAdmin": true,
+            "password": ":}v${Z"
         }
     }
 }</div>
@@ -11925,10 +11996,10 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "name": "sint",
-            "email": "rafael09@example.net",
-            "isAdmin": false,
-            "password": "O)fGn+:ZS5RD"
+            "name": "exercitationem",
+            "email": "xjakubowski@example.net",
+            "isAdmin": true,
+            "password": ":}v${Z"
         }
     }
 };
@@ -11957,10 +12028,10 @@ $response = $client-&gt;put(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'name' =&gt; 'sint',
-                    'email' =&gt; 'rafael09@example.net',
-                    'isAdmin' =&gt; false,
-                    'password' =&gt; 'O)fGn+:ZS5RD',
+                    'name' =&gt; 'exercitationem',
+                    'email' =&gt; 'xjakubowski@example.net',
+                    'isAdmin' =&gt; true,
+                    'password' =&gt; ':}v${Z',
                 ],
             ],
         ],
@@ -12222,7 +12293,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        esse
+                        ab
                     </div>
                 </div>
             </div>
@@ -12247,7 +12318,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        irutherford@example.org
+                        sanford.gardner@example.net
                     </div>
                 </div>
             </div>
@@ -12291,7 +12362,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        5FeN)P&#039;Tn
+                        NDk&quot;2&gt;l&gt;$rD
                     </div>
                 </div>
             </div>
@@ -12460,10 +12531,10 @@ print_r(json_decode((string) $body));</code></pre>                              
                                 >{
     "data": {
         "attributes": {
-            "name": "esse",
-            "email": "irutherford@example.org",
+            "name": "ab",
+            "email": "sanford.gardner@example.net",
             "isAdmin": true,
-            "password": "5FeN)P'Tn"
+            "password": "NDk\"2>l>$rD"
         }
     }
 }</div>
@@ -12569,10 +12640,10 @@ const headers = {
 let body = {
     "data": {
         "attributes": {
-            "name": "esse",
-            "email": "irutherford@example.org",
+            "name": "ab",
+            "email": "sanford.gardner@example.net",
             "isAdmin": true,
-            "password": "5FeN)P'Tn"
+            "password": "NDk\"2&gt;l&gt;$rD"
         }
     }
 };
@@ -12601,10 +12672,10 @@ $response = $client-&gt;patch(
         'json' =&gt; [
             'data' =&gt; [
                 'attributes' =&gt; [
-                    'name' =&gt; 'esse',
-                    'email' =&gt; 'irutherford@example.org',
+                    'name' =&gt; 'ab',
+                    'email' =&gt; 'sanford.gardner@example.net',
                     'isAdmin' =&gt; true,
-                    'password' =&gt; '5FeN)P\'Tn',
+                    'password' =&gt; 'NDk"2&gt;l&gt;$rD',
                 ],
             ],
         ],
@@ -13891,7 +13962,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        facere
+                        dolor
                     </div>
                 </div>
             </div>
@@ -14071,7 +14142,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                                                                     <input aria-label="filter[title]" name="filter[title]"
                                                    id="queryparam-GETapi-v1-engineer-tickets-filter[title]"
                                                    placeholder="Filter by title. Wildcards are supported. No-Example"
-                                                   value="facere" data-component="query"
+                                                   value="dolor" data-component="query"
                                                    class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border"
                                             >
                                                                             </div>
@@ -14185,7 +14256,7 @@ You can check the Dev Tools console for debugging information.</p>
 
 const params = {
     "sort": "sort=title,-createdAt",
-    "filter[title]": "facere",
+    "filter[title]": "dolor",
     "include": "Author",
 };
 Object.keys(params)
@@ -14219,7 +14290,7 @@ $response = $client-&gt;get(
         ],
         'query' =&gt; [
             'sort' =&gt; 'sort=title,-createdAt',
-            'filter[title]' =&gt; 'facere',
+            'filter[title]' =&gt; 'dolor',
             'include' =&gt; 'Author',
         ],
     ]
@@ -14296,7 +14367,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;placeat&quot;,
                 &quot;description&quot;: &quot;Ex numquam aliquid repellendus. Minima id sed hic et et consectetur fugiat sed. Et dolorem nisi eaque velit dolorem omnis omnis. Aut quam deserunt beatae.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.&quot;,
                 &quot;error_code&quot;: &quot;@&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14327,7 +14398,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;et&quot;,
                 &quot;description&quot;: &quot;Pariatur magni fugit sit. Distinctio et recusandae dolorem eum. Suscipit minima aliquid incidunt numquam sunt non ut nesciunt.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.&quot;,
                 &quot;error_code&quot;: &quot;7&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14358,7 +14429,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;quibusdam&quot;,
                 &quot;description&quot;: &quot;Quia hic ut ipsa placeat. Dolorum quibusdam nam mollitia. Exercitationem voluptatem corporis ut consequatur.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quam voluptatem molestiae impedit tenetur ut consectetur reprehenderit. Est id cum explicabo nesciunt. Eveniet omnis cum cumque deleniti magni id.&quot;,
                 &quot;error_code&quot;: &quot;c&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14389,7 +14460,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;pariatur&quot;,
                 &quot;description&quot;: &quot;Velit molestiae iste omnis sunt similique unde. Quisquam voluptatem eum repellat distinctio est accusamus porro. Possimus temporibus qui sit adipisci quibusdam at iure.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quod dolore excepturi rerum maiores aperiam minima et. Est a deserunt officiis et enim sapiente. Asperiores sed quo incidunt eum. Quisquam et explicabo quaerat sequi.&quot;,
                 &quot;error_code&quot;: &quot;a&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14420,7 +14491,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;atque&quot;,
                 &quot;description&quot;: &quot;At dolores doloribus et. Magnam vitae sit quo modi. Architecto eligendi ipsa qui perspiciatis officiis atque necessitatibus. Error maxime perferendis temporibus iure.&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Voluptatem debitis dolores quis vel qui ex quas iusto. Sint voluptas libero assumenda est. Et temporibus necessitatibus perspiciatis amet et.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14451,7 +14522,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;doloremque&quot;,
                 &quot;description&quot;: &quot;Sit distinctio iusto eaque qui autem rerum praesentium ab. Delectus corrupti quod eos. Nihil repellendus ut et. Numquam ipsa similique dolorum ratione dolores aliquam.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et porro minima nostrum quis et nam rem in. Vel quam rerum nisi sit asperiores. Consectetur consectetur ut quia saepe neque aut.&quot;,
                 &quot;error_code&quot;: &quot;b&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14482,7 +14553,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;perferendis&quot;,
                 &quot;description&quot;: &quot;Et nisi quaerat recusandae totam ullam. Consequatur qui aut adipisci animi. Consequatur nobis sequi ab. Iure error perspiciatis delectus quisquam eum nulla.&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et quod perferendis eaque ut neque sapiente mollitia iure. Quia ut itaque et aliquam ad aliquid placeat sed. Sed eos consequatur exercitationem recusandae.&quot;,
                 &quot;error_code&quot;: &quot;v&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14513,7 +14584,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;omnis&quot;,
                 &quot;description&quot;: &quot;In veritatis earum ipsam quasi expedita. Quia id cumque maxime autem numquam. Neque dolorum officiis et. Quia provident enim voluptas qui.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Omnis alias aliquam deserunt iure asperiores earum molestiae. Dignissimos necessitatibus cupiditate incidunt qui quia.&quot;,
                 &quot;error_code&quot;: &quot;O&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -14544,7 +14615,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;inventore&quot;,
                 &quot;description&quot;: &quot;Quos et ut veniam in deserunt. Cum possimus iste neque saepe officiis aut.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Dolor cupiditate nam corrupti odio animi beatae labore. Aut velit suscipit itaque omnis. Illo explicabo et sunt. Sint eos id qui occaecati eligendi ipsam.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15262,7 +15333,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;placeat&quot;,
                 &quot;description&quot;: &quot;Ex numquam aliquid repellendus. Minima id sed hic et et consectetur fugiat sed. Et dolorem nisi eaque velit dolorem omnis omnis. Aut quam deserunt beatae.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.&quot;,
                 &quot;error_code&quot;: &quot;@&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15293,7 +15364,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;et&quot;,
                 &quot;description&quot;: &quot;Pariatur magni fugit sit. Distinctio et recusandae dolorem eum. Suscipit minima aliquid incidunt numquam sunt non ut nesciunt.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.&quot;,
                 &quot;error_code&quot;: &quot;7&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15324,7 +15395,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;quibusdam&quot;,
                 &quot;description&quot;: &quot;Quia hic ut ipsa placeat. Dolorum quibusdam nam mollitia. Exercitationem voluptatem corporis ut consequatur.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quam voluptatem molestiae impedit tenetur ut consectetur reprehenderit. Est id cum explicabo nesciunt. Eveniet omnis cum cumque deleniti magni id.&quot;,
                 &quot;error_code&quot;: &quot;c&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15355,7 +15426,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;pariatur&quot;,
                 &quot;description&quot;: &quot;Velit molestiae iste omnis sunt similique unde. Quisquam voluptatem eum repellat distinctio est accusamus porro. Possimus temporibus qui sit adipisci quibusdam at iure.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Quod dolore excepturi rerum maiores aperiam minima et. Est a deserunt officiis et enim sapiente. Asperiores sed quo incidunt eum. Quisquam et explicabo quaerat sequi.&quot;,
                 &quot;error_code&quot;: &quot;a&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15386,7 +15457,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;atque&quot;,
                 &quot;description&quot;: &quot;At dolores doloribus et. Magnam vitae sit quo modi. Architecto eligendi ipsa qui perspiciatis officiis atque necessitatibus. Error maxime perferendis temporibus iure.&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Voluptatem debitis dolores quis vel qui ex quas iusto. Sint voluptas libero assumenda est. Et temporibus necessitatibus perspiciatis amet et.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15417,7 +15488,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;doloremque&quot;,
                 &quot;description&quot;: &quot;Sit distinctio iusto eaque qui autem rerum praesentium ab. Delectus corrupti quod eos. Nihil repellendus ut et. Numquam ipsa similique dolorum ratione dolores aliquam.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et porro minima nostrum quis et nam rem in. Vel quam rerum nisi sit asperiores. Consectetur consectetur ut quia saepe neque aut.&quot;,
                 &quot;error_code&quot;: &quot;b&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15448,7 +15519,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;perferendis&quot;,
                 &quot;description&quot;: &quot;Et nisi quaerat recusandae totam ullam. Consequatur qui aut adipisci animi. Consequatur nobis sequi ab. Iure error perspiciatis delectus quisquam eum nulla.&quot;,
                 &quot;status&quot;: &quot;C&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Et quod perferendis eaque ut neque sapiente mollitia iure. Quia ut itaque et aliquam ad aliquid placeat sed. Sed eos consequatur exercitationem recusandae.&quot;,
                 &quot;error_code&quot;: &quot;v&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15479,7 +15550,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;omnis&quot;,
                 &quot;description&quot;: &quot;In veritatis earum ipsam quasi expedita. Quia id cumque maxime autem numquam. Neque dolorum officiis et. Quia provident enim voluptas qui.&quot;,
                 &quot;status&quot;: &quot;X&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Omnis alias aliquam deserunt iure asperiores earum molestiae. Dignissimos necessitatibus cupiditate incidunt qui quia.&quot;,
                 &quot;error_code&quot;: &quot;O&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15510,7 +15581,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                 &quot;title&quot;: &quot;inventore&quot;,
                 &quot;description&quot;: &quot;Quos et ut veniam in deserunt. Cum possimus iste neque saepe officiis aut.&quot;,
                 &quot;status&quot;: &quot;A&quot;,
-                &quot;priority&quot;: null,
+                &quot;priority&quot;: &quot;low&quot;,
                 &quot;reproduction_step&quot;: &quot;Dolor cupiditate nam corrupti odio animi beatae labore. Aut velit suscipit itaque omnis. Illo explicabo et sunt. Sint eos id qui occaecati eligendi ipsam.&quot;,
                 &quot;error_code&quot;: &quot;R&quot;,
                 &quot;created_at&quot;: &quot;2024-12-21T03:12:37.000000Z&quot;,
@@ -15970,6 +16041,17 @@ print_r(json_decode((string) $body));</code></pre>                              
     &quot;data&quot;: [
         {
             &quot;type&quot;: &quot;engineer&quot;,
+            &quot;id&quot;: 2,
+            &quot;attributes&quot;: {
+                &quot;name&quot;: &quot;Junior Runolfsson&quot;,
+                &quot;email&quot;: &quot;libby53@example.org&quot;
+            },
+            &quot;links&quot;: {
+                &quot;self&quot;: &quot;http://tickets-laracast.test/api/v1/engineers/2&quot;
+            }
+        },
+        {
+            &quot;type&quot;: &quot;engineer&quot;,
             &quot;id&quot;: 11,
             &quot;attributes&quot;: {
                 &quot;name&quot;: &quot;The Manager&quot;,
@@ -16009,13 +16091,475 @@ print_r(json_decode((string) $body));</code></pre>                              
         ],
         &quot;path&quot;: &quot;http://tickets-laracast.test/api/v1/engineers&quot;,
         &quot;per_page&quot;: 15,
-        &quot;to&quot;: 1,
-        &quot;total&quot;: 1
+        &quot;to&quot;: 2,
+        &quot;total&quot;: 2
     }
 }</code></pre>
                                                                             </div>
                                 </div>
                                                     </div>
+                            </div>
+    </div>
+</div>
+
+                    <div class="sl-stack sl-stack--vertical sl-stack--8 HttpOperation sl-flex sl-flex-col sl-items-stretch sl-w-full">
+    <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+        <div class="sl-relative">
+            <div class="sl-stack sl-stack--horizontal sl-stack--5 sl-flex sl-flex-row sl-items-center">
+                <h2 class="sl-text-3xl sl-leading-tight sl-font-prose sl-text-heading sl-mt-5 sl-mb-1"
+                    id="endpoints-POSTapi-v1-engineers">
+                    POST api/v1/engineers
+                </h2>
+            </div>
+        </div>
+
+        <div class="sl-relative">
+            <div title="http://tickets-laracast.test/api/v1/engineers"
+                     class="sl-stack sl-stack--horizontal sl-stack--3 sl-inline-flex sl-flex-row sl-items-center sl-max-w-full sl-font-mono sl-py-2 sl-pr-4 sl-bg-canvas-50 sl-rounded-lg"
+                >
+                                            <div class="sl-text-lg sl-font-semibold sl-px-2.5 sl-py-1 sl-text-on-primary sl-rounded-lg"
+                             style="background-color: black;"
+                        >
+                            POST
+                        </div>
+                                        <div class="sl-flex sl-overflow-x-hidden sl-text-lg sl-select-all">
+                        <div dir="rtl"
+                             class="sl-overflow-x-hidden sl-truncate sl-text-muted">http://tickets-laracast.test</div>
+                        <div class="sl-flex-1 sl-font-semibold">/api/v1/engineers</div>
+                    </div>
+
+                                                    <div class="sl-font-prose sl-font-semibold sl-px-1.5 sl-py-0.5 sl-text-on-primary sl-rounded-lg"
+                                 style="background-color: darkred"
+                            >requires authentication
+                            </div>
+                                    </div>
+        </div>
+
+        
+    </div>
+    <div class="sl-flex">
+        <div data-testid="two-column-left" class="sl-flex-1 sl-w-0">
+            <div class="sl-stack sl-stack--vertical sl-stack--10 sl-flex sl-flex-col sl-items-stretch">
+                <div class="sl-stack sl-stack--vertical sl-stack--8 sl-flex sl-flex-col sl-items-stretch">
+                                            <div class="sl-stack sl-stack--vertical sl-stack--5 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">
+                                Headers
+                            </h3>
+                            <div class="sl-text-sm">
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Authorization</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        Bearer {YOUR_AUTH_KEY}
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Content-Type</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                                    <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">Accept</div>
+                                    </div>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        application/json
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+                                                            </div>
+                        </div>
+                    
+                    
+
+                    
+                                            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+                            <h3 class="sl-text-2xl sl-leading-snug sl-font-prose">Body Parameters</h3>
+
+                                <div class="sl-text-sm">
+                                    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2  sl-cursor-pointer ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                            <div class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted expansion-chevrons" role="button">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                         class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon" role="img"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                    </svg>
+                </div>
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">data</div>
+                                            <span class="sl-truncate sl-text-muted">object</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                                    </div>
+</div>
+
+                    <div class="children" style="display: none;">
+                <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2  sl-cursor-pointer ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                            <div class="sl-flex sl-justify-center sl-w-8 sl--ml-8 sl-pl-3 sl-text-muted expansion-chevrons" role="button">
+                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="chevron-right"
+                         class="svg-inline--fa fa-chevron-right fa-fw fa-sm sl-icon" role="img"
+                         xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                        <path fill="currentColor"
+                              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z"></path>
+                    </svg>
+                </div>
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">attributes</div>
+                                            <span class="sl-truncate sl-text-muted">object</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                                    </div>
+</div>
+
+                    <div class="children" style="display: none;">
+                <div class="expandable sl-text-sm sl-border-l sl-ml-7">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">user</div>
+                                            <span class="sl-truncate sl-text-muted">integer</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                <div class="sl-prose sl-markdown-viewer" style="font-size: 12px;">
+            <p>The <code>id</code> of an existing record in the users table.</p>
+        </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        14
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+                            </div>
+                        </div>
+                    
+                                    </div>
+            </div>
+        </div>
+
+        <div data-testid="two-column-right" class="sl-relative sl-w-2/5 sl-ml-16" style="max-width: 500px;">
+            <div class="sl-stack sl-stack--vertical sl-stack--6 sl-flex sl-flex-col sl-items-stretch">
+
+                                    <div class="sl-inverted">
+    <div class="sl-overflow-y-hidden sl-rounded-lg">
+        <form class="TryItPanel sl-bg-canvas-100 sl-rounded-lg"
+              data-method="POST"
+              data-path="api/v1/engineers"
+              data-hasfiles="0"
+              data-hasjsonbody="1">
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Auth
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                            <label aria-hidden="true"
+                                   for="auth-POSTapi-v1-engineers">Authorization</label>
+                            <span class="sl-mx-3">:</span>
+                            <div class="sl-flex sl-flex-1">
+                                <div class="sl-input sl-flex-1 sl-relative">
+                                    <code>Bearer </code>
+                                    <input aria-label="Authorization"
+                                           id="auth-POSTapi-v1-engineers"
+                                           data-component="header"
+                                           data-prefix="Bearer "
+                                           name="Authorization"
+                                           placeholder="{YOUR_AUTH_KEY}"
+                                           class="auth-value sl-relative sl-w-3/5 sl-h-md sl-text-base sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Headers
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="ParameterGrid sl-p-4">
+                                                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-v1-engineers-Content-Type">Content-Type</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Content-Type" name="Content-Type"
+                                               id="header-POSTapi-v1-engineers-Content-Type"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                                                            <label aria-hidden="true"
+                                       for="header-POSTapi-v1-engineers-Accept">Accept</label>
+                                <span class="sl-mx-3">:</span>
+                                <div class="sl-flex sl-flex-1">
+                                    <div class="sl-input sl-flex-1 sl-relative">
+                                        <input aria-label="Accept" name="Accept"
+                                               id="header-POSTapi-v1-engineers-Accept"
+                                               value="application/json" data-component="header"
+                                               class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+            
+            
+            
+                            <div class="sl-panel sl-outline-none sl-w-full expandable">
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Body
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                                                    <div class="TextRequestBody sl-p-4">
+                                <div class="code-editor language-json"
+                                     id="json-body-POSTapi-v1-engineers"
+                                     style="font-family: var(--font-code); font-size: 12px; line-height: var(--lh-code);"
+                                >{
+    "data": {
+        "attributes": {
+            "user": 14
+        }
+    }
+}</div>
+                            </div>
+                                            </div>
+                </div>
+            
+            <div class="SendButtonHolder sl-mt-4 sl-p-4 sl-pt-0">
+                <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-center">
+                    <button type="button" data-endpoint="POSTapi-v1-engineers"
+                            class="tryItOut-btn sl-button sl-h-sm sl-text-base sl-font-medium sl-px-1.5 sl-bg-primary hover:sl-bg-primary-dark active:sl-bg-primary-darker disabled:sl-bg-canvas-100 sl-text-on-primary disabled:sl-text-body sl-rounded sl-border-transparent sl-border disabled:sl-opacity-70"
+                    >
+                        Send Request 💥
+                    </button>
+                </div>
+            </div>
+
+            <div data-endpoint="POSTapi-v1-engineers"
+                 class="tryItOut-error expandable sl-panel sl-outline-none sl-w-full" hidden>
+                <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                     role="button">
+                    <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                        <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                            <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                 data-icon="caret-down"
+                                 class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                 xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                <path fill="currentColor"
+                                      d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                            </svg>
+                        </div>
+                        Request failed with error
+                    </div>
+                </div>
+                <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                    <div class="sl-panel__content sl-p-4">
+                        <p class="sl-pb-2"><strong class="error-message"></strong></p>
+                        <p class="sl-pb-2">Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div data-endpoint="POSTapi-v1-engineers"
+                     class="tryItOut-response expandable sl-panel sl-outline-none sl-w-full" hidden>
+                    <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-4 sl-pl-3 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-cursor-pointer sl-select-none"
+                         role="button">
+                        <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                            <div class="sl-flex sl-items-center sl-mr-1.5 expansion-chevrons expansion-chevrons-solid expanded">
+                                <svg aria-hidden="true" focusable="false" data-prefix="fas"
+                                     data-icon="caret-down"
+                                     class="svg-inline--fa fa-caret-down fa-fw sl-icon" role="img"
+                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+                                    <path fill="currentColor"
+                                          d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"></path>
+                                </svg>
+                            </div>
+                            Received response
+                        </div>
+                    </div>
+                    <div class="sl-panel__content-wrapper sl-bg-canvas-100 children" role="region">
+                        <div class="sl-panel__content sl-p-4">
+                            <p class="sl-pb-2 response-status"></p>
+                            <pre><code class="sl-pb-2 response-content language-json"
+                                       data-empty-response-text="<Empty response>"
+                                       style="max-height: 300px;"></code></pre>
+                        </div>
+                    </div>
+                </div>
+        </form>
+    </div>
+</div>
+                
+                                            <div class="sl-panel sl-outline-none sl-w-full sl-rounded-lg">
+                            <div class="sl-panel__titlebar sl-flex sl-items-center sl-relative focus:sl-z-10 sl-text-base sl-leading-none sl-pr-3 sl-pl-4 sl-bg-canvas-200 sl-text-body sl-border-input focus:sl-border-primary sl-select-none">
+                                <div class="sl-flex sl-flex-1 sl-items-center sl-h-lg">
+                                    <div class="sl--ml-2">
+                                        Example request:
+                                        <select class="example-request-lang-toggle sl-text-base"
+                                                aria-label="Request Sample Language"
+                                                onchange="switchExampleLanguage(event.target.value);">
+                                                                                            <option>javascript</option>
+                                                                                            <option>php</option>
+                                                                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-javascript"
+                                     style="">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-javascript">const url = new URL(
+    "http://tickets-laracast.test/api/v1/engineers"
+);
+
+const headers = {
+    "Authorization": "Bearer {YOUR_AUTH_KEY}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "data": {
+        "attributes": {
+            "user": 14
+        }
+    }
+};
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="sl-bg-canvas-100 example-request example-request-php"
+                                     style="display: none;">
+                                    <div class="sl-px-0 sl-py-1">
+                                        <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
+                                            <pre><code class="language-php">$client = new \GuzzleHttp\Client();
+$url = 'http://tickets-laracast.test/api/v1/engineers';
+$response = $client-&gt;post(
+    $url,
+    [
+        'headers' =&gt; [
+            'Authorization' =&gt; 'Bearer {YOUR_AUTH_KEY}',
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+        'json' =&gt; [
+            'data' =&gt; [
+                'attributes' =&gt; [
+                    'user' =&gt; 14,
+                ],
+            ],
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    
                             </div>
     </div>
 </div>

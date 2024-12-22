@@ -121,7 +121,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: distinctio
+        example: laudantium
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -131,7 +131,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: true
-        example: qreilly@example.org
+        example: weldon.lindgren@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -141,7 +141,7 @@ endpoints:
         name: data.attributes.isAdmin
         description: ''
         required: true
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -151,7 +151,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: '8Gd[tBI'
+        example: 'HA*|n,`h~AIg?kq]v:Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -160,10 +160,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: distinctio
-          email: qreilly@example.org
-          isAdmin: true
-          password: '8Gd[tBI'
+          name: laudantium
+          email: weldon.lindgren@example.org
+          isAdmin: false
+          password: 'HA*|n,`h~AIg?kq]v:Z'
     fileParameters: []
     responses:
       -
@@ -343,7 +343,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: sint
+        example: exercitationem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -353,7 +353,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: rafael09@example.net
+        example: xjakubowski@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -363,7 +363,7 @@ endpoints:
         name: data.attributes.isAdmin
         description: ''
         required: true
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -373,7 +373,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: 'O)fGn+:ZS5RD'
+        example: ':}v${Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -382,10 +382,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: sint
-          email: rafael09@example.net
-          isAdmin: false
-          password: 'O)fGn+:ZS5RD'
+          name: exercitationem
+          email: xjakubowski@example.net
+          isAdmin: true
+          password: ':}v${Z'
     fileParameters: []
     responses:
       -
@@ -460,7 +460,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: false
-        example: esse
+        example: ab
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -470,7 +470,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: irutherford@example.org
+        example: sanford.gardner@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -490,7 +490,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: false
-        example: "5FeN)P'Tn"
+        example: 'NDk"2>l>$rD'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -499,10 +499,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: esse
-          email: irutherford@example.org
+          name: ab
+          email: sanford.gardner@example.net
           isAdmin: true
-          password: "5FeN)P'Tn"
+          password: 'NDk"2>l>$rD'
     fileParameters: []
     responses:
       -

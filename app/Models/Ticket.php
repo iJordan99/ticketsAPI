@@ -48,6 +48,11 @@ class Ticket extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function hasEngineer(): bool
+    {
+        return $this->engineer()->exists();
+    }
+
     public function engineer(): BelongsToMany
     {
         return $this->belongsToMany(User::class, 'assigned_tickets', 'ticket_id', 'user_id')
@@ -57,5 +62,14 @@ class Ticket extends Model
     public function scopeFilter(Builder $builder, QueryFilter $filters)
     {
         return $filters->apply($builder);
+    }
+
+    public function scopeHasEngineer(Builder $query, $hasEngineer = true)
+    {
+        if ($hasEngineer) {
+            return $query->whereHas('engineer');
+        } else {
+            return $query->whereDoesntHave('engineer');
+        }
     }
 }

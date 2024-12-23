@@ -13,6 +13,8 @@ class BaseTicketRequest extends FormRequest
             'data.attributes.description' => 'description',
             'data.attributes.status' => 'status',
             'data.attributes.priority' => strtolower('priority'),
+            'data.attributes.reproductionStep' => 'reproduction_step',
+            'data.attributes.errorCode' => 'error_code',
             'data.attributes.createdAt' => 'created_at',
             'data.attributes.updatedAt' => 'updated_at',
             'data.relationships.author.data.id' => 'user_id',

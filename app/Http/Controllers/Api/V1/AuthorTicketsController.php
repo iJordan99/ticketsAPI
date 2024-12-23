@@ -27,6 +27,8 @@ class AuthorTicketsController extends ApiController
      * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=name
      * @queryParam filter[name] Filter by name. Wildcards are supported.
      * @queryParam filter[email] Filter by email. Wildcards are supported.
+     * @queryParam assigned Filter by assigned/unassigned : True,False.,Yes,No,1, 0 Example: True
+     * @queryParam include Return resource with included relationship: author, engineer. Example: author
      */
     public function index(User $author, TicketFilter $filters)
     {

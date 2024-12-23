@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Filters\V1\TicketFilter;
+use App\Http\Requests\Api\V1\AssignEngineerRequest;
 use App\Http\Requests\Api\V1\ReplaceTicketRequest;
 use App\Http\Requests\Api\V1\StoreTicketRequest;
 use App\Http\Requests\Api\V1\UpdateTicketRequest;
@@ -24,6 +25,8 @@ class TicketController extends ApiController
      * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=title,-createdAt
      * @queryParam filter[status] Filter by status code: A, C, H, X. No-example
      * @queryParam filter[title] Filter by title. Wildcards are supported. Example: *fix*
+     * @queryParam assigned Filter by assigned/unassigned : True,False.,Yes,No,1, 0 Example: True
+     * @queryParam include Return resource with included relationship: author, engineer. Example: author
      */
     public function index(TicketFilter $filters)
     {
@@ -40,7 +43,7 @@ class TicketController extends ApiController
      * Display an individual ticket.
      *
      * @group Tickets
-     *
+     * @queryParam include Return resource with included relationship: author, engineer. Example: author
      */
     public function show(Ticket $ticket)
     {
@@ -68,7 +71,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Replace Ticket
+     * Replace a Ticket
      *
      * Replace the specified ticket in storage.
      *
@@ -85,7 +88,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Update Ticket
+     * Update a Ticket
      *
      * Update the specified ticket in storage.
      *
@@ -102,7 +105,7 @@ class TicketController extends ApiController
     }
 
     /**
-     * Delete ticket.
+     * Delete a ticket.
      *
      * Remove the specified resource from storage.
      *
@@ -116,5 +119,21 @@ class TicketController extends ApiController
         $ticket->delete();
 
         return $this->ok('Ticket deleted');
+    }
+
+    /**
+     * Assign an engineer
+     *
+     * Assigns an engineer to the provided ticket
+     * @group Tickets
+     */
+    public function assign(AssignEngineerRequest $request, Ticket $ticket)
+    {
+        $engineer = $request['data.attributes.engineer'];
+        Gate::authorize('assign', $ticket);
+
+        $ticket->engineer()->syncWithoutDetaching($engineer);
+
+        return new TicketResource($ticket->load('engineer'));
     }
 }

@@ -2,58 +2,43 @@
 
 namespace App\Http\Controllers\Api\V1;
 
-use App\Http\Filters\V1\TicketFilter;
-use App\Http\Resources\V1\TicketResource;
+use App\Http\Filters\V1\UserFilter;
+use App\Http\Requests\Api\V1\StoreEngineerRequest;
+use App\Http\Resources\V1\EngineerResource;
+use App\Models\Engineer;
 use App\Models\User;
-use App\Policies\V1\AssignedTicketPolicy;
+use App\Policies\V1\EngineerPolicy;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class EngineerController extends ApiController
 {
-    protected string $policy = AssignedTicketPolicy::class;
+    public string $policy = EngineerPolicy::class;
 
-    /**
-     * Get authenticated engineer's assigned tickets
-     *
-     *
-     * @group Assigned Tickets
-     * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=title,-createdAt
-     * @queryParam filter[status] Filter by status code: A, C, H, X. No-example
-     * @queryParam filter[title] Filter by title. Wildcards are supported. No-Example
-     * @queryParam include Return resource with included relationship: Author, Engineer. Example: Author
-     */
-    public function index(TicketFilter $filters)
+    public function index(UserFilter $filter)
     {
-
         Gate::authorize('view', Auth::user());
-        $user = Auth::user();
-
-        $includes = $this->getIncluded();
-        return TicketResource::collection($user->assignedTickets()
-            ->filter($filters)
-            ->with($includes)->paginate());
+        return EngineerResource::collection(
+            User::has('engineer')
+                ->filter($filter)
+                ->paginate()
+        );
     }
 
-    /**
-     * Get an engineer's assigned tickets
-     *
-     * @group Assigned Tickets
-     * @urlParam user_id integer required The id of the engineer. Example: 11
-     * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=title,-createdAt
-     * @queryParam filter[status] Filter by status code: A, C, H, X. No-example
-     * @queryParam filter[title] Filter by title. Wildcards are supported. No-example
-     * @queryParam include Return resource with included relationship: Author, Engineer. Example: Author
-     */
-    public function show(User $user, TicketFilter $filters)
+    public function show(Engineer $engineer)
     {
         Gate::authorize('show', Auth::user());
-
-        $includes = $this->getIncluded();
-
-        return TicketResource::collection($user->assignedTickets()
-            ->filter($filters)
-            ->with($includes)->paginate());
-
+        return new EngineerResource($engineer->user);
     }
+    
+    public function store(StoreEngineerRequest $request)
+    {
+        Gate::authorize('store', Auth::user());
+
+        // Use mappedAttributes in case we expand the passed details
+        $user = User::findOrFail($request->mappedAttributes()['user_id']);
+        $user->engineer()->create();
+        return new EngineerResource($user);
+    }
+
 }

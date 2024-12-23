@@ -14,7 +14,7 @@ class UserResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return [
+        $rules = [
             'type' => 'user',
             'id' => $this->id,
             'attributes' => [
@@ -32,5 +32,12 @@ class UserResource extends JsonResource
                 'self' => route('authors.show', ['author' => $this->id])
             ]
         ];
+
+        if ($request->routeIs('users.index') ||
+            $request->routeIs('users.show')) {
+            $rules['links']['self'] = route('users.show', ['user' => $this->id]);
+        }
+
+        return $rules;
     }
 }

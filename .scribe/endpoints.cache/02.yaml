@@ -61,7 +61,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[{"type":"user","id":1,"attributes":{"name":"Prof. Lowell Bruen Jr.","email":"lrenner@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/1"}},{"type":"user","id":2,"attributes":{"name":"Keenan Waelchi","email":"zthompson@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/2"}},{"type":"user","id":3,"attributes":{"name":"Marquis Howe II","email":"fokon@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/3"}},{"type":"user","id":4,"attributes":{"name":"Bryana Klocko","email":"nader.lindsey@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/4"}},{"type":"user","id":5,"attributes":{"name":"Jonas Lindgren Sr.","email":"beahan.darwin@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/5"}},{"type":"user","id":6,"attributes":{"name":"Mrs. Sonya Reichel IV","email":"noah.gibson@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/6"}},{"type":"user","id":7,"attributes":{"name":"Nora Lesch","email":"leda.block@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/7"}},{"type":"user","id":8,"attributes":{"name":"Oliver McGlynn","email":"caitlyn58@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/8"}},{"type":"user","id":9,"attributes":{"name":"Ruth O''Connell","email":"ybartell@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/9"}},{"type":"user","id":10,"attributes":{"name":"Jessie Dicki","email":"mschuster@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/10"}},{"type":"user","id":11,"attributes":{"name":"The Manager","email":"manager@manager.com","is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/users","per_page":15,"to":11,"total":11}}'
+        content: '{"data":[{"type":"user","id":1,"attributes":{"name":"Mrs. Eliane Carter","email":"acrist@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/1"}},{"type":"user","id":2,"attributes":{"name":"Junior Runolfsson","email":"libby53@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/2"}},{"type":"user","id":3,"attributes":{"name":"Ashleigh Shields","email":"annie61@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/3"}},{"type":"user","id":4,"attributes":{"name":"Drake Lowe","email":"ycassin@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/4"}},{"type":"user","id":5,"attributes":{"name":"Rory Keebler","email":"name92@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/5"}},{"type":"user","id":6,"attributes":{"name":"Izabella Mills","email":"devante98@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/6"}},{"type":"user","id":7,"attributes":{"name":"Rozella Casper","email":"hailee19@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/7"}},{"type":"user","id":8,"attributes":{"name":"Cassie Terry","email":"eliza.crona@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/8"}},{"type":"user","id":9,"attributes":{"name":"Justyn Frami","email":"joanny61@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/9"}},{"type":"user","id":10,"attributes":{"name":"Aliya Mueller","email":"mason78@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/10"}},{"type":"user","id":11,"attributes":{"name":"The Manager","email":"manager@manager.com","is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/users","per_page":15,"to":11,"total":11}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -72,7 +72,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -123,7 +123,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: necessitatibus
+        example: laudantium
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -133,7 +133,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: true
-        example: sofia.hammes@example.net
+        example: weldon.lindgren@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -153,7 +153,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: 'fz9inTz]'
+        example: 'HA*|n,`h~AIg?kq]v:Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -162,10 +162,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: necessitatibus
-          email: sofia.hammes@example.net
+          name: laudantium
+          email: weldon.lindgren@example.org
           isAdmin: false
-          password: 'fz9inTz]'
+          password: 'HA*|n,`h~AIg?kq]v:Z'
     fileParameters: []
     responses:
       -
@@ -178,7 +178,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -221,7 +221,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"type":"user","id":1,"attributes":{"name":"Prof. Lowell Bruen Jr.","email":"lrenner@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/1"}}}'
+        content: '{"data":{"type":"user","id":1,"attributes":{"name":"Mrs. Eliane Carter","email":"acrist@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/1"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -232,7 +232,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -283,7 +283,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -345,7 +345,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: laboriosam
+        example: exercitationem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -355,7 +355,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: ipurdy@example.net
+        example: xjakubowski@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -365,7 +365,7 @@ endpoints:
         name: data.attributes.isAdmin
         description: ''
         required: true
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -375,7 +375,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: 'ai]Z<C2i{'
+        example: ':}v${Z'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -384,10 +384,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: laboriosam
-          email: ipurdy@example.net
-          isAdmin: false
-          password: 'ai]Z<C2i{'
+          name: exercitationem
+          email: xjakubowski@example.net
+          isAdmin: true
+          password: ':}v${Z'
     fileParameters: []
     responses:
       -
@@ -400,7 +400,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null
@@ -462,7 +462,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: false
-        example: voluptatem
+        example: ab
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -472,7 +472,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: jacquelyn99@example.org
+        example: sanford.gardner@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -492,7 +492,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: false
-        example: 'Tg{r,bcl[OA{JBY[|5$H'
+        example: 'NDk"2>l>$rD'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -501,10 +501,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: voluptatem
-          email: jacquelyn99@example.org
+          name: ab
+          email: sanford.gardner@example.net
           isAdmin: true
-          password: 'Tg{r,bcl[OA{JBY[|5$H'
+          password: 'NDk"2>l>$rD'
     fileParameters: []
     responses:
       -
@@ -517,7 +517,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 4|bP7beFXTmiVIDVNY0J0CMZW9XnpwScLZ0Awcaefdc9bdb49c'
+      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
     controller: null
     method: null
     route: null

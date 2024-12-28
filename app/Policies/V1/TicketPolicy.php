@@ -63,4 +63,9 @@ class TicketPolicy
         return $user->tokenCan(Abilities::AssignEngineer);
 
     }
+
+    public function comment(User $user)
+    {
+        return $user->tokenCan(Abilities::CommentOnTicket);
+    }
 }

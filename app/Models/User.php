@@ -69,6 +69,11 @@ class User extends Authenticatable
         return $this->hasOne(Engineer::class, 'user_id');
     }
 
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class, 'user_id');
+    }
+
     /**
      * Get the attributes that should be cast.
      *

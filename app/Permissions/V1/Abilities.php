@@ -30,6 +30,7 @@ final class Abilities
 
     const ViewEngineerTickets = 'engineer:ticket:view';
     const StoreEngineer = 'engineer:create';
+    const CommentOnTicket = 'ticket:comment';
 
     public static function getAbilities(User $user): array
     {
@@ -51,6 +52,7 @@ final class Abilities
                 self::ShowEngineer,
                 self::ViewEngineerTickets,
                 self::StoreEngineer,
+                self::CommentOnTicket,
             ];
         } elseif ($user->isEngineer()) {
             return [
@@ -59,7 +61,8 @@ final class Abilities
                 self::CreateAuthorTicket,
                 self::ReplaceAuthorTicket,
                 self::ViewAssignedTickets,
-                self::ViewEngineerTickets
+                self::ViewEngineerTickets,
+                self::CommentOnTicket,
             ];
         } else {
             return [

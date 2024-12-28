@@ -4,9 +4,11 @@ namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Filters\V1\TicketFilter;
 use App\Http\Requests\Api\V1\AssignEngineerRequest;
+use App\Http\Requests\Api\V1\CommentRequest;
 use App\Http\Requests\Api\V1\ReplaceTicketRequest;
 use App\Http\Requests\Api\V1\StoreTicketRequest;
 use App\Http\Requests\Api\V1\UpdateTicketRequest;
+use App\Http\Resources\V1\CommentResource;
 use App\Http\Resources\V1\TicketResource;
 use App\Models\Ticket;
 use App\Permissions\V1\Abilities;
@@ -22,7 +24,8 @@ class TicketController extends ApiController
      * Get all tickets
      *
      * @group Tickets
-     * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign. Example: sort=title,-createdAt
+     * @queryParam sort string Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign:
+     * priority,status,CreatedAt,UpdatedAt. Example: sort=title,-createdAt
      * @queryParam filter[status] Filter by status code: A, C, H, X. No-example
      * @queryParam filter[title] Filter by title. Wildcards are supported. Example: *fix*
      * @queryParam assigned Filter by assigned/unassigned : True,False.,Yes,No,1, 0 Example: True
@@ -135,5 +138,18 @@ class TicketController extends ApiController
         $ticket->engineer()->syncWithoutDetaching($engineer);
 
         return new TicketResource($ticket->load('engineer'));
+    }
+
+    public function comment(CommentRequest $request, Ticket $ticket)
+    {
+        Gate::authorize('comment', Auth::user());
+
+        $comment = [
+            'ticket_id' => $ticket->id,
+            'user_id' => Auth::user()->id,
+            'comment' => $request['data.attributes.comment']
+        ];
+
+        return new CommentResource($ticket->comments()->create($comment));
     }
 }

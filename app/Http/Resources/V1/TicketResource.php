@@ -33,6 +33,7 @@ class TicketResource extends JsonResource
             'includes' => [
                 'author' => new UserResource($this->whenLoaded('author')),
                 'engineer' => EngineerResource::collection($this->whenLoaded('engineer')),
+                'comments' => CommentResource::collection($this->whenLoaded('comments')),
             ],
             'links' => [
                 'self' => route('tickets.show', ['ticket' => $this->id])

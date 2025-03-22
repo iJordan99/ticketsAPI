@@ -20,7 +20,13 @@ class CommentResource extends JsonResource
             'id' => $this->id,
             'attributes' => [
                 'ticket' => $this->ticket_id,
-                'user' => $this->user_id,
+                'user' => [
+                    'id' => $this->user_id,
+                    'name' => $this->user->name,
+                    'email' => $this->user->email,
+                    'is_engineer' => $this->user->isEngineer(),
+                    'created_at' => $this->created_at
+                ],
                 'comment' => $this->comment,
             ],
             'links' => ''

@@ -63,4 +63,17 @@ class TicketPolicy
         return $user->tokenCan(Abilities::AssignEngineer);
 
     }
+
+    public function comment(User $user, Ticket $ticket)
+    {
+        if ($user->id === $ticket->user_id) {
+            return $user->tokenCan(Abilities::CommentOnOwnTicket);
+        }
+        return $user->tokenCan(Abilities::CommentOnTicket);
+    }
+
+    public function viewAssigned(User $user): bool
+    {
+        return $user->tokenCan(Abilities::ViewAssignedTickets);
+    }
 }

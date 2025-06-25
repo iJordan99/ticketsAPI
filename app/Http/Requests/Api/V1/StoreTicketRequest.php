@@ -33,6 +33,7 @@ class  StoreTicketRequest extends BaseTicketRequest
             'data.attributes' => 'required|array',
             'data.attributes.title' => 'required|string',
             'data.attributes.description' => 'required|string',
+            'data.attributes.type' => 'required|string|in:incident,problem,question,request',
             'data.attributes.priority' => $isTicketsController ? 'nullable|string|in:low,medium,high' : 'required|string|in:low,medium,high',
             'data.attributes.reproductionStep' => 'required|string',
             'data.attributes.errorCode' => 'required|string',

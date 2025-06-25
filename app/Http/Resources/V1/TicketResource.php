@@ -23,6 +23,7 @@ class TicketResource extends JsonResource
                     !$request->routeIs(['tickets.index', 'authors.tickets.index']),
                     $this->description
                 ),
+                'type' => $this->type,
                 'status' => $this->status,
                 'priority' => $this->priority,
                 'reproduction_step' => $this->reproduction_step,
@@ -33,6 +34,7 @@ class TicketResource extends JsonResource
             'includes' => [
                 'author' => new UserResource($this->whenLoaded('author')),
                 'engineer' => EngineerResource::collection($this->whenLoaded('engineer')),
+                'comments' => CommentResource::collection($this->whenLoaded('comment')),
             ],
             'links' => [
                 'self' => route('tickets.show', ['ticket' => $this->id])

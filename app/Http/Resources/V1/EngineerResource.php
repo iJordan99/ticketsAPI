@@ -20,6 +20,7 @@ class EngineerResource extends JsonResource
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
+                'assigned_at' => $this->assigned_at
             ],
             'links' => [
                 'self' => route('engineers.show', $this),

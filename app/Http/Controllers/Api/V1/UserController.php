@@ -9,11 +9,17 @@ use App\Http\Requests\Api\V1\UpdateUserRequest;
 use App\Http\Resources\V1\UserResource;
 use App\Models\User;
 use App\Policies\V1\UserPolicy;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 
 class UserController extends ApiController
 {
     protected string $policy = UserPolicy::class;
+
+    public function me()
+    {
+        return new UserResource(Auth::user());
+    }
 
     /**
      * Get all users

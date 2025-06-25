@@ -14,8 +14,11 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::patch('tickets/{ticket}', [TicketController::class, 'update']);
     Route::delete('tickets/{ticket}', [TicketController::class, 'destroy']);
 
+    Route::post('tickets/{ticket}/comment', [TicketController::class, 'comment']);
+
     Route::post('tickets/{ticket}/engineer', [TicketController::class, 'assign']);
 
+    Route::get('user', [UserController::class, 'me']);
     Route::apiResource('users', UserController::class)->except(['update']);
     Route::put('users/{user}', [UserController::class, 'replace']);
     Route::patch('users/{user}', [UserController::class, 'update']);

@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Comment;
 use App\Models\Ticket;
 use App\Models\User;
 use Illuminate\Database\Seeder;
@@ -16,17 +17,24 @@ class DatabaseSeeder extends Seeder
     {
         $user = User::factory(10)->create();
 
-        Ticket::factory(100)
+        $ticket = Ticket::factory(100)
             ->recycle($user)
             ->create();
 
         User::create([
             'email' => 'manager@manager.com',
             'password' => bcrypt('password'),
-            'name' => 'The Manager',
+            'name' => 'Jordan Smith',
             'is_admin' => true
         ]);
+        Comment::factory()->count(20)
+            ->state(function () use ($ticket, $user) {
+                return [
+                    'ticket_id' => $ticket->random()->id,
+                    'user_id' => $user->random()->id,
+                ];
+            })
+            ->create();
 
-        
     }
 }

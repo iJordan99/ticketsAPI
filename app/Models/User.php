@@ -51,7 +51,7 @@ class User extends Authenticatable
     public function assignedTickets(): BelongsToMany
     {
         return $this->belongsToMany(Ticket::class, 'assigned_tickets', 'user_id', 'ticket_id')
-            ->withTimestamps();
+            ->withPivot('assigned_at');
     }
 
     public function scopeFilter(Builder $builder, QueryFilter $filters)
@@ -67,6 +67,11 @@ class User extends Authenticatable
     public function engineer(): HasOne
     {
         return $this->hasOne(Engineer::class, 'user_id');
+    }
+
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class, 'user_id');
     }
 
     /**

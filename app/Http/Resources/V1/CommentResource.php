@@ -24,10 +24,10 @@ class CommentResource extends JsonResource
                     'id' => $this->user_id,
                     'name' => $this->user->name,
                     'email' => $this->user->email,
-                    'is_engineer' => $this->user->isEngineer(),
-                    'created_at' => $this->created_at
+                    'is_engineer' => $this->user->isEngineer()
                 ],
                 'comment' => $this->comment,
+                'created_at' => $this->created_at
             ],
             'links' => ''
         ];

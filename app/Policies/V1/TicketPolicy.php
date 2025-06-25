@@ -68,4 +68,9 @@ class TicketPolicy
     {
         return $user->tokenCan(Abilities::CommentOnTicket);
     }
+
+    public function viewAssigned(User $user): bool
+    {
+        return $user->tokenCan(Abilities::ViewAssignedTickets);
+    }
 }

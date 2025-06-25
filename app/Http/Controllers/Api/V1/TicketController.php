@@ -34,10 +34,20 @@ class TicketController extends ApiController
     public function index(TicketFilter $filters)
     {
         $user = Auth::user();
-        if ($user->tokenCan(Abilities::ViewAuthorTicket)) {
-            return TicketResource::collection(Ticket::filter($filters)->paginate());
+
+        if (request()->has('assigned')) {
+            Gate::authorize('view-assigned', Ticket::class);
         }
-        return TicketResource::collection(Ticket::filter($filters)->where('user_id', $user->id)->paginate());
+
+        $query = Ticket::filter($filters);
+
+        if ($user->tokenCan(Abilities::ViewAuthorTicket)) {
+            return TicketResource::collection($query->paginate());
+        }
+
+        $query = $query->where('user_id', $user->id);
+
+        return TicketResource::collection($query->paginate());
     }
 
     /**
@@ -150,6 +160,6 @@ class TicketController extends ApiController
             'comment' => $request['data.attributes.comment']
         ];
 
-        return new CommentResource($ticket->comments()->create($comment));
+        return new CommentResource($ticket->comment()->create($comment));
     }
 }

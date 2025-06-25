@@ -10,6 +10,7 @@ class TicketFilter extends QueryFilter
         'title',
         'status',
         'priority',
+        'type',
         'createdAt' => 'created_at',
         'updatedAt' => 'updated_at'
     ];
@@ -51,6 +52,12 @@ class TicketFilter extends QueryFilter
     {
         $likeStr = str_replace('*', '%', $value);
         return $this->builder->where('title', 'like', $likeStr);
+    }
+
+    public function type($value)
+    {
+        $likeStr = str_replace('*', '%', $value);
+        return $this->builder->where('type', 'like', $likeStr);
     }
 
     public function updatedAt($value)

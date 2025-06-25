@@ -31,6 +31,7 @@ final class Abilities
     const ViewEngineerTickets = 'engineer:ticket:view';
     const StoreEngineer = 'engineer:create';
     const CommentOnTicket = 'ticket:comment';
+    const CommentOnOwnTicket = 'ticket:own:comment';
 
     public static function getAbilities(User $user): array
     {
@@ -71,6 +72,7 @@ final class Abilities
                 self::CreateOwnTicket,
                 self::ViewOwnTicket,
                 self::ReplaceOwnTicket,
+                self::CommentOnOwnTicket
             ];
         }
     }

@@ -152,7 +152,7 @@ class TicketController extends ApiController
 
     public function comment(CommentRequest $request, Ticket $ticket)
     {
-        Gate::authorize('comment', Auth::user());
+        Gate::authorize('comment', $ticket);
 
         $comment = [
             'ticket_id' => $ticket->id,

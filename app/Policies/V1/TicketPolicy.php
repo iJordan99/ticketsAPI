@@ -64,8 +64,11 @@ class TicketPolicy
 
     }
 
-    public function comment(User $user)
+    public function comment(User $user, Ticket $ticket)
     {
+        if ($user->id === $ticket->user_id) {
+            return $user->tokenCan(Abilities::CommentOnOwnTicket);
+        }
         return $user->tokenCan(Abilities::CommentOnTicket);
     }
 

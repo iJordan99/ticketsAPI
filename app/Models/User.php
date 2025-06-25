@@ -51,7 +51,7 @@ class User extends Authenticatable
     public function assignedTickets(): BelongsToMany
     {
         return $this->belongsToMany(Ticket::class, 'assigned_tickets', 'user_id', 'ticket_id')
-            ->withTimestamps();
+            ->withPivot('assigned_at');
     }
 
     public function scopeFilter(Builder $builder, QueryFilter $filters)

@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         User::create([
             'email' => 'manager@manager.com',
             'password' => bcrypt('password'),
-            'name' => 'The Manager',
+            'name' => 'Jordan Smith',
             'is_admin' => true
         ]);
         Comment::factory()->count(20)

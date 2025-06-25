@@ -23,7 +23,9 @@ endpoints:
     queryParameters:
       sort:
         name: sort
-        description: 'Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign.'
+        description: |-
+          Data field(s) to sort by. Separate multiple fields with commas. Denote descending sort with a minus sign:
+          priority,status,CreatedAt,UpdatedAt.
         required: false
         example: 'sort=title,-createdAt'
         type: string
@@ -81,155 +83,13 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":[{"type":"ticket","id":3,"attributes":{"title":"placeat","status":"X","priority":"low","reproduction_step":"Voluptas assumenda aliquam eos provident aut vitae debitis qui. Ullam omnis quia et maxime vitae et. Cumque rerum rem nisi quas. Molestiae dolores voluptas deleniti eius.","error_code":"@","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":4,"attributes":{"name":"Drake Lowe","email":"ycassin@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/4"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/3"}},{"type":"ticket","id":1,"attributes":{"title":"et","status":"A","priority":"low","reproduction_step":"Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.","error_code":"7","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":9,"attributes":{"name":"Justyn Frami","email":"joanny61@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/9"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}},{"type":"ticket","id":2,"attributes":{"title":"quibusdam","status":"A","priority":"low","reproduction_step":"Quam voluptatem molestiae impedit tenetur ut consectetur reprehenderit. Est id cum explicabo nesciunt. Eveniet omnis cum cumque deleniti magni id.","error_code":"c","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":5,"attributes":{"name":"Rory Keebler","email":"name92@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/5"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/2"}},{"type":"ticket","id":4,"attributes":{"title":"pariatur","status":"X","priority":"low","reproduction_step":"Quod dolore excepturi rerum maiores aperiam minima et. Est a deserunt officiis et enim sapiente. Asperiores sed quo incidunt eum. Quisquam et explicabo quaerat sequi.","error_code":"a","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":2,"attributes":{"name":"Junior Runolfsson","email":"libby53@example.org","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/2"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/4"}},{"type":"ticket","id":5,"attributes":{"title":"atque","status":"C","priority":"low","reproduction_step":"Voluptatem debitis dolores quis vel qui ex quas iusto. Sint voluptas libero assumenda est. Et temporibus necessitatibus perspiciatis amet et.","error_code":"R","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":8,"attributes":{"name":"Cassie Terry","email":"eliza.crona@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/8"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/5"}},{"type":"ticket","id":6,"attributes":{"title":"doloremque","status":"A","priority":"low","reproduction_step":"Et porro minima nostrum quis et nam rem in. Vel quam rerum nisi sit asperiores. Consectetur consectetur ut quia saepe neque aut.","error_code":"b","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":4,"attributes":{"name":"Drake Lowe","email":"ycassin@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/4"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/6"}},{"type":"ticket","id":7,"attributes":{"title":"perferendis","status":"C","priority":"low","reproduction_step":"Et quod perferendis eaque ut neque sapiente mollitia iure. Quia ut itaque et aliquam ad aliquid placeat sed. Sed eos consequatur exercitationem recusandae.","error_code":"v","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":9,"attributes":{"name":"Justyn Frami","email":"joanny61@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/9"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/7"}},{"type":"ticket","id":8,"attributes":{"title":"omnis","status":"X","priority":"low","reproduction_step":"Omnis alias aliquam deserunt iure asperiores earum molestiae. Dignissimos necessitatibus cupiditate incidunt qui quia.","error_code":"O","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":7,"attributes":{"name":"Rozella Casper","email":"hailee19@example.com","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/7"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/8"}},{"type":"ticket","id":9,"attributes":{"title":"inventore","status":"A","priority":"low","reproduction_step":"Dolor cupiditate nam corrupti odio animi beatae labore. Aut velit suscipit itaque omnis. Illo explicabo et sunt. Sint eos id qui occaecati eligendi ipsam.","error_code":"R","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":{"author":{"type":"user","id":10,"attributes":{"name":"Aliya Mueller","email":"mason78@example.net","is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/10"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/9"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/tickets","per_page":15,"to":9,"total":9}}'
+        status: 401
+        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
           access-control-allow-origin: '*'
         description: null
-        custom: []
-    responseFields: []
-    auth:
-      - headers
-      - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
-    controller: null
-    method: null
-    route: null
-    custom: []
-  -
-    httpMethods:
-      - POST
-    uri: api/v1/tickets
-    metadata:
-      groupName: Tickets
-      groupDescription: ''
-      subgroup: ''
-      subgroupDescription: ''
-      title: 'Create a ticket'
-      description: 'Creates a new ticket record. Users can only create tickets for themselves'
-      authenticated: true
-      custom: []
-    headers:
-      Authorization: 'Bearer {YOUR_AUTH_KEY}'
-      Content-Type: application/json
-      Accept: application/json
-    urlParameters: []
-    cleanUrlParameters: []
-    queryParameters: []
-    cleanQueryParameters: []
-    bodyParameters:
-      data:
-        name: data
-        description: ''
-        required: true
-        example: []
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.attributes:
-        name: data.attributes
-        description: ''
-        required: true
-        example: []
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.attributes.title:
-        name: data.attributes.title
-        description: "The ticket's title (method)."
-        required: true
-        example: 'Unable to Access Email on Outlook'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.attributes.description:
-        name: data.attributes.description
-        description: "The ticket's description."
-        required: true
-        example: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."'
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.attributes.priority:
-        name: data.attributes.priority
-        description: ''
-        required: false
-        example: high
-        type: string
-        enumValues:
-          - low
-          - medium
-          - high
-        exampleWasSpecified: false
-        nullable: true
-        custom: []
-      data.relationships:
-        name: data.relationships
-        description: ''
-        required: true
-        example: []
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.relationships.author:
-        name: data.relationships.author
-        description: ''
-        required: true
-        example: []
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.relationships.author.data:
-        name: data.relationships.author.data
-        description: ''
-        required: true
-        example: []
-        type: object
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      data.relationships.author.data.id:
-        name: data.relationships.author.data.id
-        description: 'The author assigned to the ticket. The <code>id</code> of an existing record in the users table.'
-        required: true
-        example: 1
-        type: integer
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-    cleanBodyParameters:
-      data:
-        attributes:
-          title: 'Unable to Access Email on Outlook'
-          description: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."'
-          priority: high
-        relationships:
-          author:
-            data:
-              id: 1
-    fileParameters: []
-    responses:
-      -
-        status: 200
-        content: '{"data":{"type":"ticket","id":107,"attributes":{"title":"asdfasdfasdfasdfasdfsadf","description":"test ticket","status":"A","createdAt":"2024-03-26T04:40:48.000000Z","updatedAt":"2024-03-26T04:40:48.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/tickets\/107"}}}'
-        headers: []
-        description: ''
         custom: []
     responseFields: []
     auth:
@@ -270,15 +130,26 @@ endpoints:
         custom: []
     cleanUrlParameters:
       id: 1
-    queryParameters: []
-    cleanQueryParameters: []
+    queryParameters:
+      include:
+        name: include
+        description: 'Return resource with included relationship: author, engineer.'
+        required: false
+        example: author
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      include: author
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 200
-        content: '{"data":{"type":"ticket","id":1,"attributes":{"title":"et","description":"Pariatur magni fugit sit. Distinctio et recusandae dolorem eum. Suscipit minima aliquid incidunt numquam sunt non ut nesciunt.","status":"A","priority":"low","reproduction_step":"Ipsa debitis ducimus repellendus et voluptas. Id alias minus dolore architecto beatae. Ad architecto veritatis eum. Laborum quia saepe nihil necessitatibus.","error_code":"7","created_at":"2024-12-21T03:12:37.000000Z","updated_at":"2024-12-21T03:12:37.000000Z"},"includes":[],"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}}}'
+        status: 401
+        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -351,7 +222,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: true
-        example: voluptatibus
+        example: saepe
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -361,7 +232,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: true
-        example: 'Earum qui accusamus inventore est dolorum qui voluptate nisi.'
+        example: 'Exercitationem perferendis accusantium suscipit omnis culpa repellat et.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -371,7 +242,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: H
+        example: C
         type: string
         enumValues:
           - A
@@ -385,7 +256,7 @@ endpoints:
         name: data.attributes.priority
         description: 'Must be at least 1. Must not be greater than 3.'
         required: false
-        example: 2
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -425,7 +296,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: true
-        example: 1
+        example: 12
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -434,14 +305,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: voluptatibus
-          description: 'Earum qui accusamus inventore est dolorum qui voluptate nisi.'
-          status: H
-          priority: 2
+          title: saepe
+          description: 'Exercitationem perferendis accusantium suscipit omnis culpa repellat et.'
+          status: C
+          priority: 1
         relationships:
           author:
             data:
-              id: 1
+              id: 12
     fileParameters: []
     responses: []
     responseFields: []
@@ -510,7 +381,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: false
-        example: ipsam
+        example: quam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -520,7 +391,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: false
-        example: 'Quia ullam modi accusamus earum perspiciatis.'
+        example: 'Voluptas dolorem occaecati quia rerum accusantium consequuntur aliquam.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -530,7 +401,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: false
-        example: H
+        example: A
         type: string
         enumValues:
           - A
@@ -544,7 +415,7 @@ endpoints:
         name: data.attributes.priority
         description: ''
         required: false
-        example: low
+        example: Low
         type: string
         enumValues:
           - low
@@ -590,7 +461,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: false
-        example: 14
+        example: 8
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -599,14 +470,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: ipsam
-          description: 'Quia ullam modi accusamus earum perspiciatis.'
-          status: H
-          priority: low
+          title: quam
+          description: 'Voluptas dolorem occaecati quia rerum accusantium consequuntur aliquam.'
+          status: A
+          priority: Low
         relationships:
           author:
             data:
-              id: 14
+              id: 8
     fileParameters: []
     responses: []
     responseFields: []
@@ -720,7 +591,7 @@ endpoints:
         name: data.attributes.engineer
         description: 'The <code>id</code> of an existing record in the users table. The <code>user_id</code> of an existing record in the engineers table.'
         required: true
-        example: 6
+        example: 7
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -729,7 +600,7 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          engineer: 6
+          engineer: 7
     fileParameters: []
     responses: []
     responseFields: []

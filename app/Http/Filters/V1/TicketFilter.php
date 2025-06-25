@@ -38,7 +38,7 @@ class TicketFilter extends QueryFilter
 
     public function priority($value)
     {
-        $priorityMap = Ticket::priorityMap;
+        $priorityMap = array_change_key_case(Ticket::priorityMap, CASE_LOWER);
         $priorityValue = $priorityMap[strtolower($value)] ?? null;
 
         if ($priorityValue !== null) {

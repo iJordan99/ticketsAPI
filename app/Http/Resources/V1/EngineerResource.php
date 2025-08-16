@@ -20,6 +20,8 @@ class EngineerResource extends JsonResource
             'attributes' => [
                 'name' => $this->name,
                 'email' => $this->email,
+                'is_engineer' => $this->isEngineer(),
+                'is_admin' => $this->is_admin,
                 'assigned_at' => $this->assigned_at
             ],
             'links' => [

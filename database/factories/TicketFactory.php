@@ -20,16 +20,15 @@ class TicketFactory extends Factory
      */
     public function definition(): array
     {
-
         $types = ['incident', 'problem', 'question', 'request'];
-        $priorities = array_keys(Ticket::priorityMap);
+        $priority = ['Low', 'Medium', 'High'];  // Capitalized values to match priorityMap
         return [
             'user_id' => User::factory(),
             'title' => fake()->word(3, true),
             'description' => fake()->paragraph(),
             'type' => Arr::random($types),
+            'priority' => Arr::random($priority),
             'status' => $this->faker->randomElement(StatusEnum::cases())->value,
-            'priority' => Arr::random($priorities),
             'reproduction_step' => $this->faker->text(),
             'error_code' => $this->faker->randomAscii()
         ];

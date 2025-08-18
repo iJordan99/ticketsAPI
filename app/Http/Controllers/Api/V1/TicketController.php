@@ -11,6 +11,7 @@ use App\Http\Requests\Api\V1\UpdateTicketRequest;
 use App\Http\Resources\V1\CommentResource;
 use App\Http\Resources\V1\TicketResource;
 use App\Models\Ticket;
+use App\Models\User;
 use App\Permissions\V1\Abilities;
 use App\Policies\V1\TicketPolicy;
 use Illuminate\Support\Facades\Auth;
@@ -146,6 +147,20 @@ class TicketController extends ApiController
         Gate::authorize('assign', $ticket);
 
         $ticket->engineer()->syncWithoutDetaching($engineer);
+
+        return new TicketResource($ticket->load('engineer'));
+    }
+
+    public function unassign(Ticket $ticket, User $engineer)
+    {
+        Gate::authorize('unassign', [$ticket, $engineer]);
+
+        $detached = $ticket->engineer()->detach($engineer->getKey());
+        if ($detached === 0) {
+            abort(404, 'Engineer is not assigned to this ticket.');
+        }
+        
+        $ticket->unsetRelation('engineer');
 
         return new TicketResource($ticket->load('engineer'));
     }

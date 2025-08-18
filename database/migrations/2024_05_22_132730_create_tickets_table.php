@@ -16,7 +16,7 @@ return new class extends Migration {
             $table->string('title');
             $table->text('description');
             $table->text('type');
-            $table->integer('priority')->nullable();
+            $table->integer('priority');
             $table->string('status');
             $table->text('reproduction_step');
             $table->string('error_code');

@@ -15,7 +15,7 @@ return new class extends Migration {
             $table->foreignId('user_id')->constrained();
             $table->string('title');
             $table->text('description');
-            $table->text('type');
+            $table->text('type')->nullable();
             $table->integer('priority');
             $table->string('status');
             $table->text('reproduction_step');

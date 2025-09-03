@@ -8,5 +8,6 @@ enum StatusEnum: string
     case Completed = 'C';
     case Hold = 'H';
     case Cancelled = 'X';
+    case New = "N";
 
 }

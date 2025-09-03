@@ -60,8 +60,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":[{"type":"user","id":1,"attributes":{"name":"Maritza Cummings DDS","email":"cecilia21@example.com","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/1"}},{"type":"user","id":2,"attributes":{"name":"Dedrick Walsh","email":"quinn97@example.org","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/2"}},{"type":"user","id":3,"attributes":{"name":"Amos Padberg","email":"king.leanne@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/3"}},{"type":"user","id":4,"attributes":{"name":"Ofelia Smitham","email":"rosella64@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/4"}},{"type":"user","id":5,"attributes":{"name":"Domenico Veum","email":"lthiel@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/5"}},{"type":"user","id":6,"attributes":{"name":"George Schiller","email":"alena10@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/6"}},{"type":"user","id":7,"attributes":{"name":"Ellen McDermott","email":"isabell.white@example.com","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/7"}},{"type":"user","id":8,"attributes":{"name":"Miss Hosea Lehner III","email":"ted.lowe@example.com","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/8"}},{"type":"user","id":9,"attributes":{"name":"Mrs. Tabitha Feest Jr.","email":"gislason.asha@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/9"}},{"type":"user","id":10,"attributes":{"name":"Prof. Marshall Ziemann","email":"stanton50@example.net","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/10"}},{"type":"user","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":false,"is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/users?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/users","per_page":15,"to":11,"total":11}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -72,7 +72,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -123,7 +123,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: omnis
+        example: consequatur
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -133,7 +133,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: true
-        example: green.mathew@example.net
+        example: kaley18@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -153,7 +153,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: 'GDg3*V_9;uU!sF:s'
+        example: UYA.0W)m
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -162,10 +162,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: omnis
-          email: green.mathew@example.net
+          name: consequatur
+          email: kaley18@example.org
           isAdmin: true
-          password: 'GDg3*V_9;uU!sF:s'
+          password: UYA.0W)m
     fileParameters: []
     responses:
       -
@@ -178,7 +178,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -220,8 +220,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":{"type":"user","id":1,"attributes":{"name":"Maritza Cummings DDS","email":"cecilia21@example.com","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/1"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -232,7 +232,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -283,7 +283,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -345,7 +345,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: true
-        example: explicabo
+        example: ipsum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -355,7 +355,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: rosetta60@example.net
+        example: beverly76@example.com
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -365,7 +365,7 @@ endpoints:
         name: data.attributes.isAdmin
         description: ''
         required: true
-        example: false
+        example: true
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -375,7 +375,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: true
-        example: ">d,|'s"
+        example: 2|;BgKf8mj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -384,10 +384,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: explicabo
-          email: rosetta60@example.net
-          isAdmin: false
-          password: ">d,|'s"
+          name: ipsum
+          email: beverly76@example.com
+          isAdmin: true
+          password: 2|;BgKf8mj
     fileParameters: []
     responses:
       -
@@ -400,7 +400,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -462,7 +462,7 @@ endpoints:
         name: data.attributes.name
         description: ''
         required: false
-        example: magni
+        example: eveniet
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -472,7 +472,7 @@ endpoints:
         name: data.attributes.email
         description: 'Must be a valid email address.'
         required: false
-        example: chet.runte@example.net
+        example: qborer@example.net
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -482,7 +482,7 @@ endpoints:
         name: data.attributes.isAdmin
         description: ''
         required: false
-        example: true
+        example: false
         type: boolean
         enumValues: []
         exampleWasSpecified: false
@@ -492,7 +492,7 @@ endpoints:
         name: data.attributes.password
         description: ''
         required: false
-        example: '[?Ob@^8n('
+        example: 'QFMrm>#'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -501,10 +501,10 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          name: magni
-          email: chet.runte@example.net
-          isAdmin: true
-          password: '[?Ob@^8n('
+          name: eveniet
+          email: qborer@example.net
+          isAdmin: false
+          password: 'QFMrm>#'
     fileParameters: []
     responses:
       -
@@ -517,7 +517,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null

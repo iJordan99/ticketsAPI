@@ -45,7 +45,7 @@ endpoints:
         name: 'filter[title]'
         description: 'Filter by title. Wildcards are supported. No-Example'
         required: false
-        example: modi
+        example: natus
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -63,15 +63,15 @@ endpoints:
         custom: []
     cleanQueryParameters:
       sort: 'sort=title,-createdAt'
-      'filter[title]': modi
+      'filter[title]': natus
       include: Author
     bodyParameters: []
     cleanBodyParameters: []
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineer\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineer\/tickets?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineer\/tickets?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineer\/tickets","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -109,7 +109,7 @@ endpoints:
         name: engineer_user_id
         description: 'The ID of the engineer user.'
         required: true
-        example: 11
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -126,7 +126,7 @@ endpoints:
         nullable: false
         custom: []
     cleanUrlParameters:
-      engineer_user_id: 11
+      engineer_user_id: 15
       user_id: 11
     queryParameters:
       sort:
@@ -177,8 +177,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 404
+        content: '{"error":{"type":"NotFoundHttpException","status":404,"message":"Not Found \/api\/v1\/engineer\/15\/tickets"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -189,7 +189,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null

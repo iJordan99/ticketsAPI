@@ -33,6 +33,7 @@ class  StoreTicketRequest extends BaseTicketRequest
             'data.attributes' => 'required|array',
             'data.attributes.title' => 'required|string',
             'data.attributes.description' => 'required|string',
+            'data.attributes.status' => 'required|string|size:1|in:A,C,H,X,N',
             'data.attributes.type' => 'required|string|in:incident,problem,question,request',
             'data.attributes.priority' => $isTicketsController ? 'nullable|string|in:low,medium,high' : 'required|string|in:low,medium,high',
             'data.attributes.reproductionStep' => 'required|string',
@@ -58,16 +59,32 @@ class  StoreTicketRequest extends BaseTicketRequest
     {
         $documentation = [
             'data.attributes.title' => [
-                'description' => "The ticket's title (method)",
+                'description' => "The ticket's title",
                 'example' => 'Unable to Access Email on Outlook'
             ],
             'data.attributes.description' => [
                 'description' => "The ticket's description",
-                'example' => 'Unable to access my company email account using Outlook on my work laptop i receive the following error message “Cannot connect to the server."',
+                'example' => 'Unable to access my company email account using Outlook on my work laptop i receive the following error message "Cannot connect to the server."',
             ],
             'data.attributes.status' => [
-                'description' => "The ticket's status",
-                'example' => 'C',
+                'description' => "The ticket's status (A: Active, C: Closed, H: On Hold, X: Cancelled, N: New)",
+                'example' => 'N',
+            ],
+            'data.attributes.type' => [
+                'description' => "The ticket type",
+                'example' => 'incident'
+            ],
+            'data.attributes.priority' => [
+                'description' => "The ticket priority",
+                'example' => 'medium'
+            ],
+            'data.attributes.reproductionStep' => [
+                'description' => "Steps to reproduce the issue",
+                'example' => '1. Open Outlook 2. Click on Send/Receive 3. Error appears'
+            ],
+            'data.attributes.errorCode' => [
+                'description' => "The error code associated with the ticket",
+                'example' => 'ERR_CONNECTION_TIMEOUT'
             ],
         ];
 

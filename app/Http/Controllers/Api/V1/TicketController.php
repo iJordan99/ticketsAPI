@@ -76,7 +76,27 @@ class TicketController extends ApiController
      *
      * @group Tickets
      *
-     * @response {"data":{"type":"ticket","id":107,"attributes":{"title":"asdfasdfasdfasdfasdfsadf","description":"test ticket","status":"A","createdAt":"2024-03-26T04:40:48.000000Z","updatedAt":"2024-03-26T04:40:48.000000Z"},"relationships":{"author":{"data":{"type":"user","id":1},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/localhost:8000\/api\/v1\/tickets\/107"}}}
+     * @response {
+     * "data": {
+     * "type": "ticket",
+     * "id": 103,
+     * "attributes": {
+     * "title": "Unable to Access Email on Outlook",
+     * "description": "Unable to access my company email account using Outlook on my work laptop i receive the following error message \"Cannot connect to the server.\"",
+     * "type": "incident",
+     * "status": "N",
+     * "priority": "Medium",
+     * "reproduction_step": "1. Open Outlook 2. Click on Send/Receive 3. Error appears",
+     * "error_code": "ERR_CONNECTION_TIMEOUT",
+     * "created_at": "2025-09-03T13:42:17.000000Z",
+     * "updated_at": "2025-09-03T13:42:17.000000Z"
+     * },
+     * "includes": [],
+     * "links": {
+     * "self": "https://tickets.test/api/v1/tickets/103"
+     * }
+     * }
+     * }
      */
     public function store(StoreTicketRequest $request)
     {
@@ -159,7 +179,7 @@ class TicketController extends ApiController
         if ($detached === 0) {
             abort(404, 'Engineer is not assigned to this ticket.');
         }
-        
+
         $ticket->unsetRelation('engineer');
 
         return new TicketResource($ticket->load('engineer'));

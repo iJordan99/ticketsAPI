@@ -46,7 +46,7 @@ endpoints:
         name: 'filter[name]'
         description: 'Filter by name. Wildcards are supported.'
         required: false
-        example: velit
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -56,7 +56,7 @@ endpoints:
         name: 'filter[email]'
         description: 'Filter by email. Wildcards are supported.'
         required: false
-        example: explicabo
+        example: culpa
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -84,8 +84,8 @@ endpoints:
         custom: []
     cleanQueryParameters:
       sort: sort=name
-      'filter[name]': velit
-      'filter[email]': explicabo
+      'filter[name]': et
+      'filter[email]': culpa
       assigned: 'True'
       include: author
     bodyParameters: []
@@ -102,7 +102,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -164,7 +164,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -237,7 +237,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: true
-        example: autem
+        example: nemo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -247,7 +247,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: true
-        example: 'Voluptatem cumque consequatur eligendi reiciendis quaerat fugit.'
+        example: 'Molestiae voluptatum aperiam fugiat voluptas quo quia suscipit.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -311,7 +311,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: true
-        example: 14
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -320,14 +320,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: autem
-          description: 'Voluptatem cumque consequatur eligendi reiciendis quaerat fugit.'
+          title: nemo
+          description: 'Molestiae voluptatum aperiam fugiat voluptas quo quia suscipit.'
           status: H
           priority: 3
         relationships:
           author:
             data:
-              id: 14
+              id: 3
     fileParameters: []
     responses:
       -
@@ -340,7 +340,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -413,7 +413,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: false
-        example: adipisci
+        example: et
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -423,7 +423,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: false
-        example: 'Doloremque eaque ea placeat reiciendis impedit commodi voluptas.'
+        example: 'Cumque ducimus voluptate impedit omnis adipisci provident voluptas voluptatum.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -433,7 +433,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: false
-        example: H
+        example: C
         type: string
         enumValues:
           - A
@@ -447,7 +447,7 @@ endpoints:
         name: data.attributes.priority
         description: ''
         required: false
-        example: medium
+        example: Medium
         type: string
         enumValues:
           - low
@@ -493,7 +493,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: false
-        example: 13
+        example: 17
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -502,21 +502,21 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: adipisci
-          description: 'Doloremque eaque ea placeat reiciendis impedit commodi voluptas.'
-          status: H
-          priority: medium
+          title: et
+          description: 'Cumque ducimus voluptate impedit omnis adipisci provident voluptas voluptatum.'
+          status: C
+          priority: Medium
         relationships:
           author:
             data:
-              id: 13
+              id: 17
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null

@@ -26,6 +26,8 @@ abstract class QueryFilter
                 $this->$key($value);
             }
         }
+
+        return $this->builder;
     }
 
     protected function filter($arr)

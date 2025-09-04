@@ -51,7 +51,7 @@ class TicketFilter extends QueryFilter
     public function title($value)
     {
         $likeStr = str_replace('*', '%', $value);
-        return $this->builder->where('title', 'like', $likeStr);
+        return $this->builder->where('title', 'like', "%{$likeStr}%");
     }
 
     public function type($value)

@@ -83,8 +83,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/tickets?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/tickets","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -95,7 +95,223 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/v1/tickets
+    metadata:
+      groupName: Tickets
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a ticket'
+      description: 'Creates a new ticket record. Users can only create tickets for themselves'
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      data:
+        name: data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes:
+        name: data.attributes
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.title:
+        name: data.attributes.title
+        description: "The ticket's title."
+        required: true
+        example: 'Unable to Access Email on Outlook'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.description:
+        name: data.attributes.description
+        description: "The ticket's description."
+        required: true
+        example: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message "Cannot connect to the server."'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.status:
+        name: data.attributes.status
+        description: "The ticket's status (A: Active, C: Closed, H: On Hold, X: Cancelled, N: New). Must be 1 character."
+        required: true
+        example: 'N'
+        type: string
+        enumValues:
+          - A
+          - C
+          - H
+          - X
+          - 'N'
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.type:
+        name: data.attributes.type
+        description: 'The ticket type.'
+        required: true
+        example: incident
+        type: string
+        enumValues:
+          - incident
+          - problem
+          - question
+          - request
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.priority:
+        name: data.attributes.priority
+        description: 'The ticket priority.'
+        required: false
+        example: medium
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      data.attributes.reproductionStep:
+        name: data.attributes.reproductionStep
+        description: 'Steps to reproduce the issue.'
+        required: true
+        example: '1. Open Outlook 2. Click on Send/Receive 3. Error appears'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.attributes.errorCode:
+        name: data.attributes.errorCode
+        description: 'The error code associated with the ticket.'
+        required: true
+        example: ERR_CONNECTION_TIMEOUT
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships:
+        name: data.relationships
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author:
+        name: data.relationships.author
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data:
+        name: data.relationships.author.data
+        description: ''
+        required: true
+        example: []
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      data.relationships.author.data.id:
+        name: data.relationships.author.data.id
+        description: 'The author assigned to the ticket. The <code>id</code> of an existing record in the users table.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      data:
+        attributes:
+          title: 'Unable to Access Email on Outlook'
+          description: 'Unable to access my company email account using Outlook on my work laptop i receive the following error message "Cannot connect to the server."'
+          status: 'N'
+          type: incident
+          priority: medium
+          reproductionStep: '1. Open Outlook 2. Click on Send/Receive 3. Error appears'
+          errorCode: ERR_CONNECTION_TIMEOUT
+        relationships:
+          author:
+            data:
+              id: 1
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+          "data": {
+          "type": "ticket",
+          "id": 103,
+          "attributes": {
+          "title": "Unable to Access Email on Outlook",
+          "description": "Unable to access my company email account using Outlook on my work laptop i receive the following error message \"Cannot connect to the server.\"",
+          "type": "incident",
+          "status": "N",
+          "priority": "Medium",
+          "reproduction_step": "1. Open Outlook 2. Click on Send/Receive 3. Error appears",
+          "error_code": "ERR_CONNECTION_TIMEOUT",
+          "created_at": "2025-09-03T13:42:17.000000Z",
+          "updated_at": "2025-09-03T13:42:17.000000Z"
+          },
+          "includes": [],
+          "links": {
+          "self": "https://tickets.test/api/v1/tickets/103"
+          }
+          }
+          }
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -148,8 +364,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":{"type":"ticket","id":1,"attributes":{"title":"corporis","description":"At perspiciatis tempora voluptas nihil quia est. Qui nostrum praesentium fugiat officia maiores. Ipsum neque voluptatibus non repudiandae non illum sit et.","type":"problem","status":"A","priority":"Medium","reproduction_step":"Repudiandae alias nostrum sit commodi ipsum. Placeat sunt ipsa quas minima nostrum aut. Est nihil debitis placeat doloribus error corrupti perferendis. Labore quia est quis eos dolorem maiores.","error_code":"m","created_at":"2025-09-03T13:07:26.000000Z","updated_at":"2025-09-03T13:07:26.000000Z"},"includes":{"author":{"type":"user","id":1,"attributes":{"name":"Maritza Cummings DDS","email":"cecilia21@example.com","is_engineer":false,"is_admin":false},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/1"}}},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/tickets\/1"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -160,7 +376,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -222,7 +438,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: true
-        example: saepe
+        example: illo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -232,7 +448,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: true
-        example: 'Exercitationem perferendis accusantium suscipit omnis culpa repellat et.'
+        example: 'Ea quidem excepturi quis sunt necessitatibus.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -242,7 +458,7 @@ endpoints:
         name: data.attributes.status
         description: ''
         required: true
-        example: C
+        example: H
         type: string
         enumValues:
           - A
@@ -256,7 +472,7 @@ endpoints:
         name: data.attributes.priority
         description: 'Must be at least 1. Must not be greater than 3.'
         required: false
-        example: 1
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -296,7 +512,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: true
-        example: 12
+        example: 15
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -305,21 +521,21 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: saepe
-          description: 'Exercitationem perferendis accusantium suscipit omnis culpa repellat et.'
-          status: C
-          priority: 1
+          title: illo
+          description: 'Ea quidem excepturi quis sunt necessitatibus.'
+          status: H
+          priority: 3
         relationships:
           author:
             data:
-              id: 12
+              id: 15
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -381,7 +597,7 @@ endpoints:
         name: data.attributes.title
         description: ''
         required: false
-        example: quam
+        example: vel
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -391,7 +607,7 @@ endpoints:
         name: data.attributes.description
         description: ''
         required: false
-        example: 'Voluptas dolorem occaecati quia rerum accusantium consequuntur aliquam.'
+        example: 'Quaerat atque facere ad iusto.'
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -415,7 +631,7 @@ endpoints:
         name: data.attributes.priority
         description: ''
         required: false
-        example: Low
+        example: High
         type: string
         enumValues:
           - low
@@ -461,7 +677,7 @@ endpoints:
         name: data.relationships.author.data.id
         description: ''
         required: false
-        example: 8
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -470,21 +686,21 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          title: quam
-          description: 'Voluptas dolorem occaecati quia rerum accusantium consequuntur aliquam.'
+          title: vel
+          description: 'Quaerat atque facere ad iusto.'
           status: A
-          priority: Low
+          priority: High
         relationships:
           author:
             data:
-              id: 8
+              id: 1
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -529,7 +745,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -591,7 +807,7 @@ endpoints:
         name: data.attributes.engineer
         description: 'The <code>id</code> of an existing record in the users table. The <code>user_id</code> of an existing record in the engineers table.'
         required: true
-        example: 7
+        example: 16
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -600,14 +816,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          engineer: 7
+          engineer: 16
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null

@@ -36,14 +36,15 @@ class UserFilter extends QueryFilter
     public function email($value)
     {
         $likeStr = str_replace('*', '%', $value);
-        return $this->builder->where('email', 'like', $likeStr);
+        return $this->builder->where('email', 'like', "%{$likeStr}%");
     }
 
     public function name($value)
     {
         $likeStr = str_replace('*', '%', $value);
-        return $this->builder->where('name', 'like', $likeStr);
+        return $this->builder->where('name', 'like', "%{$likeStr}%");
     }
+
 
     public function updatedAt($value)
     {

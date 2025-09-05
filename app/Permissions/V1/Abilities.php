@@ -25,6 +25,7 @@ final class Abilities
 
     public const ViewAssignedTickets = 'ticket:assigned:view';
     const AssignEngineer = 'ticket:engineer:assign';
+    const UnassignEngineer = 'ticket:engineer:unassign';
     const ViewEngineer = 'engineer:view';
     const ShowEngineer = 'engineer:show';
 
@@ -54,6 +55,7 @@ final class Abilities
                 self::ViewEngineerTickets,
                 self::StoreEngineer,
                 self::CommentOnTicket,
+                self::UnassignEngineer
             ];
         } elseif ($user->isEngineer()) {
             return [

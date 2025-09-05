@@ -17,6 +17,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('tickets/{ticket}/comment', [TicketController::class, 'comment']);
 
     Route::post('tickets/{ticket}/engineer', [TicketController::class, 'assign']);
+    Route::delete('tickets/{ticket}/engineer/{engineer}', [TicketController::class, 'unassign']);
 
     Route::get('user', [UserController::class, 'me']);
     Route::apiResource('users', UserController::class)->except(['update']);

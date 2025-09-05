@@ -11,6 +11,7 @@ class BaseTicketRequest extends FormRequest
         $attributeMap = array_merge([
             'data.attributes.title' => 'title',
             'data.attributes.description' => 'description',
+            'data.attributes.type' => 'type',
             'data.attributes.status' => 'status',
             'data.attributes.priority' => strtolower('priority'),
             'data.attributes.reproductionStep' => 'reproduction_step',
@@ -33,7 +34,7 @@ class BaseTicketRequest extends FormRequest
     public function messages()
     {
         return [
-            'data.attributes.status' => 'The data.attributes.status value is invalid. Please use A, C, H, or X.'
+            'data.attributes.status' => 'The data.attributes.status value is invalid. Please use A, C, H,X, or N'
         ];
     }
 }

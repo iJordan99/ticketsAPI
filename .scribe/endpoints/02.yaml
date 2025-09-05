@@ -58,7 +58,7 @@ endpoints:
         name: data.attributes.comment
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: ufccngoihheuwgpldzl
+        example: jfdfgxj
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -67,14 +67,70 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          comment: ufccngoihheuwgpldzl
+          comment: jfdfgxj
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/tickets/{ticket_id}/engineer/{engineer_id}'
+    metadata:
+      groupName: Endpoints
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: ''
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      ticket_id:
+        name: ticket_id
+        description: 'The ID of the ticket.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      engineer_id:
+        name: engineer_id
+        description: 'The ID of the engineer.'
+        required: true
+        example: 11
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      ticket_id: 1
+      engineer_id: 11
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -105,8 +161,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":{"type":"user","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":false,"is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/11"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -117,7 +173,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -148,8 +204,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 200
+        content: '{"data":[],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineers","per_page":15,"to":null,"total":0}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -160,7 +216,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -211,7 +267,7 @@ endpoints:
         name: data.attributes.user
         description: 'The <code>id</code> of an existing record in the users table.'
         required: true
-        example: 7
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -220,14 +276,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          user: 7
+          user: 6
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null
@@ -254,14 +310,14 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: 11
+        example: 6
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      user_id: 11
+      user_id: 6
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -269,8 +325,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 401
-        content: '{"error":{"type":"AuthenticationException","status":401,"message":"Unauthenticated."}}'
+        status: 404
+        content: '{"error":{"type":"NotFoundHttpException","status":404,"message":"Not Found \/api\/v1\/engineers\/6"}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -281,7 +337,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 8|skv9ZvzuDtoAWB8TktWjVSqj0ksvzJUVxODjp5UT7f50dd36'
+      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
     controller: null
     method: null
     route: null

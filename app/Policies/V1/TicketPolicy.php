@@ -61,7 +61,11 @@ class TicketPolicy
     public function assign(User $user): bool
     {
         return $user->tokenCan(Abilities::AssignEngineer);
+    }
 
+    public function unassign(User $user): bool
+    {
+        return $user->tokenCan(Abilities::UnassignEngineer);
     }
 
     public function comment(User $user, Ticket $ticket)

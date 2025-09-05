@@ -61,7 +61,7 @@ class ApiExceptions
                 'status' => 404,
                 'message' => 'Not Found ' . $request->getRequestUri()
             ]
-        ], 422);
+        ], 404);
     }
 
     public static function handleAccessDeniedException(AccessDeniedHttpException $e, Request $request): JsonResponse

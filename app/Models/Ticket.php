@@ -39,7 +39,9 @@ class Ticket extends Model
 
     public function setPriorityAttribute($value): void
     {
-        $this->attributes['priority'] = self::priorityMap[strtolower($value)] ?? null;
+        // Capitalize first letter to match the priorityMap keys
+        $value = ucfirst(strtolower($value));
+        $this->attributes['priority'] = self::priorityMap[$value] ?? null;
     }
 
     public function getPriorityAttribute($value): int|string|null

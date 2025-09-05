@@ -11,6 +11,7 @@ class TicketFilter extends QueryFilter
         'status',
         'priority',
         'type',
+        'author',
         'createdAt' => 'created_at',
         'updatedAt' => 'updated_at'
     ];
@@ -34,6 +35,11 @@ class TicketFilter extends QueryFilter
     public function status($value)
     {
         return $this->builder->whereIn('status', explode(',', $value));
+    }
+
+    public function author($value)
+    {
+        return $this->builder->where('user_id', $value);
     }
 
     public function priority($value)

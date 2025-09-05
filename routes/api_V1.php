@@ -1,7 +1,5 @@
 <?php
 
-use App\Http\Controllers\Api\V1\AuthorsController;
-use App\Http\Controllers\Api\V1\AuthorTicketsController;
 use App\Http\Controllers\Api\V1\EngineerController;
 use App\Http\Controllers\Api\V1\EngineerTicketsController;
 use App\Http\Controllers\Api\V1\TicketController;
@@ -34,9 +32,4 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('engineer/{engineer}/tickets', [EngineerTicketsController::class, 'show'])
         ->name('engineer.tickets.show');
-
-    Route::apiResource('authors', AuthorsController::class)->except(['update', 'destroy']);
-    Route::apiResource('authors.tickets', AuthorTicketsController::class)->except(['update']);
-    Route::put('authors/{author}/tickets/{ticket}', [AuthorTicketsController::class, 'replace']);
-    Route::patch('authors/{author}/tickets/{ticket}', [AuthorTicketsController::class, 'update']);
 });

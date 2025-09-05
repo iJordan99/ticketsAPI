@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\V1\AuthorsController;
 use App\Http\Controllers\Api\V1\EngineerController;
 use App\Http\Controllers\Api\V1\TicketController;
 use App\Http\Controllers\Api\V1\UserController;
@@ -25,4 +26,6 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('engineers/{engineer}', [EngineerController::class, 'show'])
         ->name('engineers.show');
+
+    Route::get('authors', [AuthorsController::class, 'index']);
 });

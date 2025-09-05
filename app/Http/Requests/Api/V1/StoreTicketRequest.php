@@ -44,6 +44,9 @@ class  StoreTicketRequest extends BaseTicketRequest
             $rules['data.relationships'] = 'required|array';
             $rules['data.relationships.author'] = 'required|array';
             $rules['data.relationships.author.data'] = 'required|array';
+            $rules['data.relationships.engineer'] = 'sometimes|array';
+            $rules['data.relationships.engineer.data'] = 'sometimes|array';
+            $rules['data.relationships.engineer.data.*.id'] = 'sometimes|integer|exists:users,id|exists:engineers,user_id';
         }
 
         $rules[$authorIdAttr] = $authorRule . '|size:' . $user->id;
@@ -64,23 +67,23 @@ class  StoreTicketRequest extends BaseTicketRequest
             ],
             'data.attributes.description' => [
                 'description' => "The ticket's description",
-                'example' => 'Unable to access my company email account using Outlook on my work laptop i receive the following error message "Cannot connect to the server."',
+                'example' => 'Cannot access my company email account using Outlook.'
             ],
             'data.attributes.status' => [
-                'description' => "The ticket's status (A: Active, C: Closed, H: On Hold, X: Cancelled, N: New)",
+                'description' => "Ticket status (A: Active, C: Closed, H: On Hold, X: Cancelled, N: New)",
                 'example' => 'N',
             ],
             'data.attributes.type' => [
-                'description' => "The ticket type",
+                'description' => "Ticket type",
                 'example' => 'incident'
             ],
             'data.attributes.priority' => [
-                'description' => "The ticket priority",
+                'description' => "Ticket priority",
                 'example' => 'medium'
             ],
             'data.attributes.reproductionStep' => [
                 'description' => "Steps to reproduce the issue",
-                'example' => '1. Open Outlook 2. Click on Send/Receive 3. Error appears'
+                'example' => '1. Open Outlook 2. Click Send/Receive 3. Error appears'
             ],
             'data.attributes.errorCode' => [
                 'description' => "The error code associated with the ticket",
@@ -93,6 +96,15 @@ class  StoreTicketRequest extends BaseTicketRequest
                 'description' => 'The author assigned to the ticket.',
                 'example' => '1'
             ];
+
+            // Optional engineers
+            $documentation['data.relationships.engineer.data'] = [
+                'description' => 'Optional engineers assigned to this ticket.',
+                'example' => [
+                    ['id' => 2],
+                    ['id' => 3]
+                ]
+            ];
         } else {
             $documentation['author'] = [
                 'description' => 'The author assigned to the ticket.',
@@ -101,16 +113,5 @@ class  StoreTicketRequest extends BaseTicketRequest
         }
 
         return $documentation;
-
     }
-
-    protected function prepareForValidation(): void
-    {
-        if ($this->routeIs('authors.tickets.store')) {
-            $this->merge([
-                'author' => $this->route('author')->id, // Extract the ID
-            ]);
-        }
-    }
-
 }

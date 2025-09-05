@@ -26,7 +26,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: marta85@example.org
+        example: drath@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -36,15 +36,15 @@ endpoints:
         name: password
         description: 'Must be at least 8 characters.'
         required: true
-        example: '|.wt2xvq'
+        example: '<BM6n.cu'
         type: string
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanBodyParameters:
-      email: marta85@example.org
-      password: '|.wt2xvq'
+      email: drath@example.org
+      password: '<BM6n.cu'
     fileParameters: []
     responses:
       -
@@ -101,7 +101,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null

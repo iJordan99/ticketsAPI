@@ -19,6 +19,7 @@ class BaseTicketRequest extends FormRequest
             'data.attributes.createdAt' => 'created_at',
             'data.attributes.updatedAt' => 'updated_at',
             'data.relationships.author.data.id' => 'user_id',
+            'data.relationships.engineer.data.id' => 'engineer_id',
         ], $otherAttributes);
 
         $attributesToUpdate = [];
@@ -26,6 +27,12 @@ class BaseTicketRequest extends FormRequest
             if ($this->has($key)) {
                 $attributesToUpdate[$attribute] = $this->input($key);
             }
+        }
+
+        if ($this->has('data.relationships.engineer.data')) {
+            $attributesToUpdate['engineer_ids'] = collect($this->input('data.relationships.engineer.data'))
+                ->pluck('id')
+                ->toArray();
         }
 
         return $attributesToUpdate;

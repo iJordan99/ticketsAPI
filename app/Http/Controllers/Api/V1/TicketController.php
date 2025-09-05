@@ -101,7 +101,24 @@ class TicketController extends ApiController
     public function store(StoreTicketRequest $request)
     {
         Gate::authorize('store', Ticket::class);
-        return new TicketResource(Ticket::create($request->mappedAttributes()));
+
+        $ticketData = $request->mappedAttributes();
+
+        //Engineers are stored in a pivot table - remove them before creating a ticket
+        $engineerData = $ticketData['engineer_ids'] ?? [];
+        if (!is_array($engineerData)) {
+            $engineerData = [$engineerData];
+        }
+        unset($ticketData['engineer_ids']);
+
+        $ticket = Ticket::create($ticketData);
+
+        //Attach engineers to the ticket
+        if (!empty($engineerData)) {
+            $ticket->engineer()->attach($engineerData, ['assigned_at' => now()]);
+        }
+
+        return new TicketResource($ticket);
     }
 
     /**

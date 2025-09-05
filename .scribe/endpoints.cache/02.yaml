@@ -60,7 +60,7 @@ endpoints:
         name: data.attributes.comment
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: jfdfgxj
+        example: sztgrjejt
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -69,14 +69,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          comment: jfdfgxj
+          comment: sztgrjejt
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null
@@ -132,7 +132,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null
@@ -164,7 +164,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":{"type":"user","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":false,"is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/authors\/11"}}}'
+        content: '{"data":{"type":"user","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":true,"is_admin":true},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/users\/11"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -175,7 +175,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null
@@ -207,7 +207,7 @@ endpoints:
     responses:
       -
         status: 200
-        content: '{"data":[],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":null,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineers","per_page":15,"to":null,"total":0}}'
+        content: '{"data":[{"type":"engineer","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":true,"is_admin":true,"assigned_at":null},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/engineers\/11"}}],"links":{"first":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","last":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","prev":null,"next":null},"meta":{"current_page":1,"from":1,"last_page":1,"links":[{"url":null,"label":"&laquo; Previous","active":false},{"url":"http:\/\/tickets-laracast.test\/api\/v1\/engineers?page=1","label":"1","active":true},{"url":null,"label":"Next &raquo;","active":false}],"path":"http:\/\/tickets-laracast.test\/api\/v1\/engineers","per_page":15,"to":1,"total":1}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -218,7 +218,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null
@@ -269,7 +269,7 @@ endpoints:
         name: data.attributes.user
         description: 'The <code>id</code> of an existing record in the users table.'
         required: true
-        example: 6
+        example: 10
         type: integer
         enumValues: []
         exampleWasSpecified: false
@@ -278,14 +278,14 @@ endpoints:
     cleanBodyParameters:
       data:
         attributes:
-          user: 6
+          user: 10
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null
@@ -312,14 +312,14 @@ endpoints:
         name: user_id
         description: 'The ID of the user.'
         required: true
-        example: 6
+        example: 11
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      user_id: 6
+      user_id: 11
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -327,8 +327,8 @@ endpoints:
     fileParameters: []
     responses:
       -
-        status: 404
-        content: '{"error":{"type":"NotFoundHttpException","status":404,"message":"Not Found \/api\/v1\/engineers\/6"}}'
+        status: 200
+        content: '{"data":{"type":"engineer","id":11,"attributes":{"name":"Jordan Smith","email":"manager@manager.com","is_engineer":true,"is_admin":true,"assigned_at":null},"links":{"self":"http:\/\/tickets-laracast.test\/api\/v1\/engineers\/11"}}}'
         headers:
           cache-control: 'no-cache, private'
           content-type: application/json
@@ -339,7 +339,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1|WKs9hynKcG2EoXSQI7WtbKSlVQboncJjsm31WIk1697dfa6e'
+      - 'Bearer 2|HRTYIm4qSAXQRCSa4z8WUovcWcImYtSMLBJUtAd907eb9823'
     controller: null
     method: null
     route: null

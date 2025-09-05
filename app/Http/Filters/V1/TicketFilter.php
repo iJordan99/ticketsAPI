@@ -12,6 +12,7 @@ class TicketFilter extends QueryFilter
         'priority',
         'type',
         'author',
+        'engineer',
         'createdAt' => 'created_at',
         'updatedAt' => 'updated_at'
     ];
@@ -40,6 +41,13 @@ class TicketFilter extends QueryFilter
     public function author($value)
     {
         return $this->builder->where('user_id', $value);
+    }
+
+    public function engineer($value)
+    {
+        return $this->builder->whereHas('engineer', function ($query) use ($value) {
+            $query->where('user_id', $value);
+        });
     }
 
     public function priority($value)

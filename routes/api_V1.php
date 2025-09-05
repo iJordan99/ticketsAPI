@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\Api\V1\EngineerController;
-use App\Http\Controllers\Api\V1\EngineerTicketsController;
 use App\Http\Controllers\Api\V1\TicketController;
 use App\Http\Controllers\Api\V1\UserController;
 use Illuminate\Support\Facades\Route;
@@ -26,10 +25,4 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::get('engineers/{engineer}', [EngineerController::class, 'show'])
         ->name('engineers.show');
-
-    Route::get('engineer/tickets', [EngineerTicketsController::class, 'index'])
-        ->name('engineer.tickets');
-
-    Route::get('engineer/{engineer}/tickets', [EngineerTicketsController::class, 'show'])
-        ->name('engineer.tickets.show');
 });
